@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page</title>
+</head>
+<body>
+    <h1>Contenu avec iframe</h1>
+
+    <!-- Exemple d'iframe avec une image de Lorem Picsum et du texte -->
+    <iframe srcdoc='
+        <html>
+            <head>
+                <style>
+                    body { font-family: "Arial", sans-serif; text-align: center; }
+                    img { max-width: 100%; height: auto; }
+                </style>
+            </head>
+            <body>
+                <h2>Contenu dans l\'iframe</h2>
+                <img src="https://picsum.photos/300/200" alt="Image example from Lorem Picsum">
+                <p>Texte d\'exemple.</p>
+            </body>
+        </html>
+    ' width="300" height="200" frameborder="0"></iframe>
+
+    <p>Autre contenu de la page principale.</p>
+</body>
+</html>
