@@ -75,6 +75,24 @@ export const experiences: ExperienceItem[] = [
     technologies: ['React', 'Django', 'REST API'],
     kind: 'project',
   },
+  {
+    company: 'Hélice',
+    role: 'Développeur Logiciel Junior',
+    period: '2024',
+    description:
+      'Développement d’une application de scraping de données sur les entreprises (Python, Django, Requests, BeautifulSoup, DrissionPage). Mise à jour du module d’achat Odoo pour personnaliser les factures d’achat.',
+    technologies: ['Python', 'Django', 'Requests', 'BeautifulSoup', 'DrissionPage', 'Odoo'],
+    kind: 'job',
+  },
+  {
+    company: 'Hélice (Stage)',
+    role: 'Développeur Backend Junior',
+    period: '2023',
+    description:
+      'Création d’API REST avec Django REST Framework (DRF) pour la gestion du backend d’une application mobile.',
+    technologies: ['Python', 'Django', 'Django REST Framework', 'REST API'],
+    kind: 'job',
+  },
 ]
 
 export type ProjectLink = { label: string; href: string }
