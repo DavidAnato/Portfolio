@@ -1,508 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Anato - Testeur d'applications / QA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="icon" type="image/png" href="ico.png" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
-        }
-        .skill-bar {
-            transition: width 1s ease-in-out;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease both;
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Anato — Développeur Full-Stack & IA</title>
+    <meta
+      name="description"
+      content="Portfolio de David Anato, développeur Full-Stack & IA spécialisé en applications web et mobiles modernes — Python/Django, React, React Native, Vue.js, Node.js et intelligence artificielle."
+    />
+    <meta name="author" content="David Anato" />
+    <link rel="canonical" href="https://davidanato.github.io/Portfolio/" />
+    <link rel="icon" type="image/png" href="/ico.png" />
 
-    <!-- Navigation -->
-    <nav class="bg-white/80 backdrop-blur shadow-md fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <img src="ico.png" alt="Logo du site" class="h-10 w-10" />
-            <div class="hidden md:flex space-x-8">
-                <a href="#accueil" class="hover:text-blue-600 transition">Accueil</a>
-                <a href="#apropos" class="hover:text-blue-600 transition">À propos</a>
-                <a href="#competences" class="hover:text-blue-600 transition">Compétences</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Expérience</a>
-                <a href="#projets" class="hover:text-blue-600 transition">Projets</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
-            <a href="#accueil" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-house mr-2"></i>Accueil</a>
-            <a href="#apropos" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-user mr-2"></i>À propos</a>
-            <a href="#competences" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-code mr-2"></i>Compétences</a>
-            <a href="#experience" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-briefcase mr-2"></i>Expérience</a>
-            <a href="#projets" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-folder-open mr-2"></i>Projets</a>
-            <a href="#contact" class="block py-2 hover:text-blue-600"><i class="fa-solid fa-envelope mr-2"></i>Contact</a>
-        </div>
-    </nav>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://davidanato.github.io/Portfolio/" />
+    <meta property="og:title" content="David Anato — Développeur Full-Stack & IA" />
+    <meta
+      property="og:description"
+      content="Développeur Full-Stack & IA — conception, développement et déploiement d'applications web et mobiles modernes."
+    />
+    <meta property="og:image" content="https://davidanato.github.io/Portfolio/image.png" />
+    <meta property="og:locale" content="fr_FR" />
 
-    <!-- Hero Section -->
-    <section id="accueil" class="gradient-bg text-white pt-36 pb-24">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-4">David Anato</h1>
-                    <p class="text-2xl md:text-3xl mb-6">Testeur d'applications / QA – Profil développeur</p>
-                    <p class="text-lg md:text-xl mb-8 max-w-3xl md:max-w-none mx-auto md:mx-0">
-                        Développeur d'applications avec une forte expérience en tests fonctionnels de sites web et d'applications mobiles. Habitué à analyser les fonctionnalités du point de vue utilisateur, détecter les bugs, tester la cohérence des parcours et fournir des retours clairs aux équipes techniques.
-                    </p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Me contacter</a>
-                        <a href="#projets" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">Voir mes projets</a>
-                    </div>
-                </div>
-                <div class="flex justify-center md:justify-end fade-in-up">
-                    <img src="image.png" alt="Portrait de David Anato" class="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl ring-8 ring-white/20 transition-transform duration-300 hover:scale-105" />
-                </div>
-            </div>
-        </div>
-    </section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="David Anato — Développeur Full-Stack & IA" />
+    <meta
+      name="twitter:description"
+      content="Développeur Full-Stack & IA — web, mobile, backend, APIs, real-time et IA."
+    />
+    <meta name="twitter:image" content="https://davidanato.github.io/Portfolio/image.png" />
 
-    <!-- À propos -->
-    <section id="apropos" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12"><i class="fa-solid fa-user mr-3 text-blue-600"></i>À propos</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg mb-4">
-                        Étudiant en Intelligence Artificielle à l'Institut Cerco, je suis passionné par l'innovation technologique et la qualité logicielle. Mon profil unique combine des compétences de développeur avec une expertise en tests et assurance qualité.
-                    </p>
-                    <p class="text-lg mb-4">
-                        Avec une expérience solide dans le développement d'applications web et mobiles, je suis particulièrement méthodique dans l'analyse des fonctionnalités, la détection de bugs et l'amélioration de l'expérience utilisateur.
-                    </p>
-                    <div class="mt-6">
-                        <h3 class="font-semibold text-xl mb-3">Formation</h3>
-                        <div class="space-y-3">
-                            <div class="border-l-4 border-blue-600 pl-4">
-                                <p class="font-semibold">Licence en Informatique de Gestion (IA)</p>
-                                <p class="text-gray-600">Institut Cerco • 2022-2025</p>
-                            </div>
-                            <div class="border-l-4 border-blue-600 pl-4">
-                                <p class="font-semibold">Baccalauréat Série D</p>
-                                <p class="text-gray-600">CP Sainte Séraphine • 2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-100 p-8 rounded-lg">
-                    <h3 class="font-semibold text-xl mb-4">Soft Skills</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Rigueur et sens du détail</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Esprit analytique</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Patience et méthode</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Résolution de problèmes</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Travail d'équipe</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Adaptabilité</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-blue-600 rounded-full mr-3"></div>
-                            <span>Bonne communication technique</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Compétences -->
-    <section id="competences" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12"><i class="fa-solid fa-code mr-3 text-blue-600"></i>Compétences</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Tests & QA -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Tests & Qualité logicielle</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Tests fonctionnels d'applications web et mobiles</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Détection, reproduction et documentation de bugs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Tests des parcours utilisateurs (formulaires, navigation)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Tests UX / ergonomie et cohérence fonctionnelle</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Tests responsive et multi-navigateurs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 text-xl mr-2 flex-shrink-0"></i>
-                            <span>Validation des fonctionnalités avant mise en production</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Développement -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Développement & Technologies</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">JavaScript / TypeScript</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">Python</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">React / React Native</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">Django / DRF</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">Vue.js</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-start mb-1">
-                                <span class="font-medium">Odoo Framework</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-6">
-                        <p class="text-sm text-gray-600">Autres : HTML, CSS, Next.js, FastAPI, Node.js, APIs REST, Git/GitHub</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expérience -->
-    <section id="experience" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12"><i class="fa-solid fa-briefcase mr-3 text-blue-600"></i>Expérience Professionnelle</h2>
-            
-            <div class="space-y-8">
-                <!-- Zenpilote -->
-                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                        <div>
-                            <h3 class="text-xl font-bold">Développeur d'applications / Tests fonctionnels</h3>
-                            <p class="text-blue-600 font-semibold">Zenpilote</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">2025</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Développement d'applications web et mobile avec intégration de tests fonctionnels</li>
-                        <li>Vérification des parcours utilisateurs, formulaires et cohérence UX</li>
-                        <li>Détection et correction de bugs avant mise en production</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-600"><strong>Projets :</strong> Prestige Distribution, SwimConnect, Timvio (mobile)</p>
-                </div>
-
-                <!-- LaToure -->
-                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                        <div>
-                            <h3 class="text-xl font-bold">Développeur d'applications / Tests fonctionnels</h3>
-                            <p class="text-blue-600 font-semibold">LaToure</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">Août 2024 – Avril 2025</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Développement d'applications web et mobile avec validation fonctionnelle</li>
-                        <li>Tests des fonctionnalités clés (navigation, formulaires, notifications)</li>
-                        <li>Optimisation de la performance et de l'expérience utilisateur</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-600"><strong>Projets :</strong> OmneeFX (web), Azɔtɛn (mobile)</p>
-                </div>
-
-                <!-- Fames Benin -->
-                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                        <div>
-                            <h3 class="text-xl font-bold">Développeur Web Full-Stack / Tests fonctionnels</h3>
-                            <p class="text-blue-600 font-semibold">Fames Benin</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">Août – Octobre 2024</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Conception et développement du site et du back-office</li>
-                        <li>Tests fonctionnels, responsive et corrections d'anomalies</li>
-                        <li>Amélioration de l'ergonomie et de la stabilité du site</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-600"><strong>Projet :</strong> famesbenin.org</p>
-                </div>
-
-                <!-- Hélice 2024 -->
-                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                        <div>
-                            <h3 class="text-xl font-bold">Développeur d'applications Junior / Tests fonctionnels</h3>
-                            <p class="text-blue-600 font-semibold">Hélice (Stage)</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">2024</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Développement et tests de modules ERP sous Odoo</li>
-                        <li>Vérification des fonctionnalités métier et des interfaces</li>
-                        <li>Détection et correction de bugs</li>
-                    </ul>
-                </div>
-
-                <!-- Hélice 2023 -->
-                <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                        <div>
-                            <h3 class="text-xl font-bold">Développeur Backend Junior / Tests API</h3>
-                            <p class="text-blue-600 font-semibold">Hélice</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">2023</span>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Développement d'API REST avec Django DRF</li>
-                        <li>Tests des endpoints et gestion des erreurs</li>
-                        <li>Vérification de la fiabilité des services backend</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projets -->
-    <section id="projets" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12"><i class="fa-solid fa-folder-open mr-3 text-blue-600"></i>Projets Réalisés</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Prestige Distribution -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center">
-                        <i class="fa-solid fa-truck text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Prestige Distribution</h3>
-                        <p class="text-gray-600 mb-4">Application web de distribution</p>
-                        <a href="https://www.prestige-distribution.eu/" target="_blank" class="text-blue-600 hover:underline">Voir le site →</a>
-                    </div>
-                </div>
-
-                <!-- SwimConnect -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                        <i class="fa-solid fa-person-swimming text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">SwimConnect</h3>
-                        <p class="text-gray-600 mb-4">Plateforme pour maîtres-nageurs et piscines</p>
-                        <a href="https://swimconnect.zenpilote.fr/" target="_blank" class="text-blue-600 hover:underline">Voir le site →</a>
-                    </div>
-                </div>
-
-                <!-- Timvio -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-                        <i class="fa-solid fa-calendar-check text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Timvio</h3>
-                        <p class="text-gray-600 mb-4">Application mobile de prise de rendez-vous</p>
-                        <span class="text-gray-500">Mobile App</span>
-                    </div>
-                </div>
-
-                <!-- OmneeFX -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center">
-                        <i class="fa-solid fa-chart-line text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">OmneeFX</h3>
-                        <p class="text-gray-600 mb-4">Application web de trading</p>
-                        <a href="https://www.omneefx.com/" target="_blank" class="text-blue-600 hover:underline">Voir le site →</a>
-                    </div>
-                </div>
-
-                <!-- Azɔtɛn -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
-                        <i class="fa-solid fa-mobile-screen-button text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Azɔtɛn</h3>
-                        <p class="text-gray-600 mb-4">Application mobile</p>
-                        <span class="text-gray-500">Mobile App</span>
-                    </div>
-                </div>
-
-                <!-- Fames Benin -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
-                        <i class="fa-solid fa-globe text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Fames Benin</h3>
-                        <p class="text-gray-600 mb-4">Site de la Fédération des Étudiants Béninois en Chine</p>
-                        <a href="https://www.famesbenin.org/" target="_blank" class="text-blue-600 hover:underline">Voir le site →</a>
-                    </div>
-                </div>
-
-                <!-- EwaTiwa -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden fade-in-up">
-                    <div class="h-48 bg-gradient-to-br from-fuchsia-500 to-rose-500 flex items-center justify-center">
-                        <i class="fa-solid fa-store text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">EwaTiwa</h3>
-                        <p class="text-gray-600 mb-4">Site e-commerce spécialisé dans les produits cosmétiques pour peau noire et métissée</p>
-                        <a href="https://ewatiwa.com/" target="_blank" class="text-blue-600 hover:underline">Voir le site →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12"><i class="fa-solid fa-envelope mr-3 text-blue-600"></i>Me Contacter</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-6 bg-gray-50 p-8 rounded-lg shadow-md">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-phone text-blue-600 text-xl mr-4"></i>
-                        <a href="tel:+2290156543880" class="text-gray-700 hover:text-blue-600">+229-01-56-54-38-80</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fa-brands fa-whatsapp text-green-600 text-xl mr-4"></i>
-                        <a href="https://wa.me/22956543880" target="_blank" class="text-gray-700 hover:text-blue-600">+229-56-54-38-80</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-envelope text-blue-600 text-xl mr-4"></i>
-                        <a href="mailto:david1anato@gmail.com" class="text-gray-700 hover:text-blue-600">david1anato@gmail.com</a>
-                    </div>
-                </div>
-                <div>
-                    <form id="contact-form" class="bg-gray-50 p-6 rounded-lg shadow-md space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
-                            <input id="name" name="name" type="text" required class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input id="email" name="email" type="email" required class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition">Envoyer</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-100 py-8">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-            <p class="text-gray-600">© 2026 David Anato. Tous droits réservés.</p>
-            <div class="mt-4 md:mt-0 space-x-4">
-                <a href="#accueil" class="text-gray-700 hover:text-purple-600"> <i class="fa-solid fa-arrow-up"></i> </a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if (menuBtn && menu) {
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('name')?.value || '';
-                const email = document.getElementById('email')?.value || '';
-                const message = document.getElementById('message')?.value || '';
-                const subject = encodeURIComponent('Contact depuis portfolio: ' + name);
-                const body = encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-                const mailto = 'mailto:david1anato@gmail.com?subject=' + subject + '&body=' + body;
-                window.location.href = mailto;
-            });
-        }
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "David Anato",
+            "jobTitle": "Développeur Full-Stack & IA",
+            "url": "https://davidanato.github.io/Portfolio/",
+            "email": "mailto:david1anato@gmail.com",
+            "telephone": "+22956543880",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Cotonou",
+              "addressCountry": "BJ"
+            },
+            "sameAs": ["https://github.com/DavidAnato"],
+            "knowsAbout": [
+              "Full-Stack Development",
+              "React",
+              "Django",
+              "React Native",
+              "Vue.js",
+              "Artificial Intelligence"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "David Anato — Portfolio",
+            "url": "https://davidanato.github.io/Portfolio/",
+            "description": "Portfolio professionnel de David Anato, développeur Full-Stack & IA.",
+            "inLanguage": "fr-FR"
+          }
+        ]
+      }
     </script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
