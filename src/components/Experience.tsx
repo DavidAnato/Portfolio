@@ -1,6 +1,7 @@
 import { experiences } from '../data/content'
 import { SectionHeading } from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
+import { IconBriefcase, IconCalendar, IconFolder } from './Icons'
 
 export function Experience() {
   const ref = useReveal<HTMLDivElement>()
@@ -17,18 +18,20 @@ export function Experience() {
         <div ref={ref} className="reveal relative space-y-6">
           <div
             aria-hidden
-            className="absolute left-[11px] top-3 bottom-3 w-px bg-gradient-to-b from-violet/50 via-white/10 to-transparent hidden sm:block"
+            className="absolute left-[19px] top-3 bottom-3 w-px bg-gradient-to-b from-violet/50 via-white/10 to-transparent hidden sm:block"
           />
 
           {experiences.map((item) => (
             <article
               key={`${item.company}-${item.period}`}
-              className="relative sm:pl-10 rounded-2xl border border-white/8 bg-panel/50 p-6 sm:p-7 hover:border-violet/25 transition-colors"
+              className="relative sm:pl-14 rounded-2xl border border-white/8 bg-panel/50 p-6 sm:p-7 hover:border-violet/25 transition-colors"
             >
               <span
                 aria-hidden
-                className="hidden sm:block absolute left-[7px] top-8 h-2.5 w-2.5 rounded-full bg-violet ring-4 ring-ink"
-              />
+                className="hidden sm:flex absolute left-2 top-7 h-9 w-9 items-center justify-center rounded-xl border border-violet/30 bg-ink text-violet-bright ring-4 ring-ink"
+              >
+                <IconBriefcase size={16} />
+              </span>
 
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                 <div>
@@ -47,14 +50,18 @@ export function Experience() {
                   </div>
                   <p className="text-violet-bright font-medium">{item.role}</p>
                 </div>
-                <p className="text-sm text-zinc-400 shrink-0">{item.period}</p>
+                <p className="inline-flex items-center gap-1.5 text-sm text-zinc-400 shrink-0">
+                  <IconCalendar size={14} className="opacity-70" />
+                  {item.period}
+                </p>
               </div>
 
               <p className="text-zinc-300 leading-relaxed">{item.description}</p>
 
               {item.projects?.length ? (
-                <p className="mt-4 text-sm text-zinc-400">
-                  <span className="text-zinc-500">Projets associés :</span>{' '}
+                <p className="mt-4 inline-flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                  <IconFolder size={14} className="text-zinc-500" />
+                  <span className="text-zinc-500">Projets associés :</span>
                   {item.projects.join(' · ')}
                 </p>
               ) : null}

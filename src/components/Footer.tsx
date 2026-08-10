@@ -1,4 +1,5 @@
 import { profile } from '../data/content'
+import { IconArrowUp, IconGithub, IconMail } from './Icons'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -14,14 +15,23 @@ export function Footer() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-white transition-colors"
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors"
           >
+            <IconGithub size={14} />
             GitHub
           </a>
-          <a href={`mailto:${profile.email}`} className="text-zinc-400 hover:text-white transition-colors">
+          <a
+            href={`mailto:${profile.email}`}
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors"
+          >
+            <IconMail size={14} />
             Email
           </a>
-          <a href="#accueil" className="text-zinc-400 hover:text-violet-bright transition-colors">
+          <a
+            href="#accueil"
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-violet-bright transition-colors"
+          >
+            <IconArrowUp size={14} />
             Haut de page
           </a>
         </div>

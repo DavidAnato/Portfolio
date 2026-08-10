@@ -1,6 +1,7 @@
 import { projects, type Project } from '../data/content'
 import { SectionHeading } from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
+import { IconBrain, IconCheck, IconExternalLink, IconGithub } from './Icons'
 
 function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
   return (
@@ -44,7 +45,7 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
               key={item}
               className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-zinc-300"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan shrink-0" aria-hidden />
+              <IconCheck size={14} className="text-cyan shrink-0" />
               {item}
             </li>
           ))}
@@ -66,20 +67,21 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 
       {project.links?.length ? (
         <div className="mt-6 flex flex-wrap gap-3">
-          {project.links.map((link) => (
-            <a
-              key={link.href + link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white hover:bg-violet/20 hover:border-violet/40 transition-colors"
-            >
-              {link.label}
-              <span aria-hidden className="ml-2 text-zinc-400">
-                ↗
-              </span>
-            </a>
-          ))}
+          {project.links.map((link) => {
+            const isGithub = /github\.com/i.test(link.href) || /github/i.test(link.label)
+            return (
+              <a
+                key={link.href + link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white hover:bg-violet/20 hover:border-violet/40 transition-colors"
+              >
+                {isGithub ? <IconGithub size={14} /> : <IconExternalLink size={14} />}
+                {link.label}
+              </a>
+            )
+          })}
         </div>
       ) : null}
     </article>
@@ -161,7 +163,8 @@ export function Projects() {
                 Projets autour du Machine Learning, du NLP et du traitement de données.
               </p>
             </div>
-            <span className="rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-medium text-cyan">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-medium text-cyan">
+              <IconBrain size={12} />
               Intelligence artificielle
             </span>
           </div>

@@ -2,6 +2,14 @@ import { useState, type FormEvent } from 'react'
 import { profile } from '../data/content'
 import { SectionHeading } from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
+import {
+  IconDownload,
+  IconGithub,
+  IconMail,
+  IconPhone,
+  IconSend,
+  IconWhatsApp,
+} from './Icons'
 
 export function Contact() {
   const ref = useReveal<HTMLDivElement>()
@@ -35,8 +43,8 @@ export function Contact() {
               href={`mailto:${profile.email}`}
               className="flex items-center gap-4 rounded-2xl border border-white/8 bg-panel/55 p-5 hover:border-violet/35 transition-colors"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet/15 text-violet-bright text-sm font-semibold">
-                @
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet/15 text-violet-bright">
+                <IconMail size={20} />
               </span>
               <div>
                 <p className="text-sm text-zinc-400">Email</p>
@@ -50,8 +58,8 @@ export function Contact() {
               rel="noopener noreferrer"
               className="flex items-center gap-4 rounded-2xl border border-white/8 bg-panel/55 p-5 hover:border-violet/35 transition-colors"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-zinc-200 text-sm font-semibold">
-                GH
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-zinc-200">
+                <IconGithub size={20} />
               </span>
               <div>
                 <p className="text-sm text-zinc-400">GitHub</p>
@@ -63,8 +71,8 @@ export function Contact() {
               href={profile.phoneHref}
               className="flex items-center gap-4 rounded-2xl border border-white/8 bg-panel/55 p-5 hover:border-violet/35 transition-colors"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan/10 text-cyan text-sm font-semibold">
-                Tel
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
+                <IconPhone size={20} />
               </span>
               <div>
                 <p className="text-sm text-zinc-400">Téléphone</p>
@@ -78,8 +86,8 @@ export function Contact() {
               rel="noopener noreferrer"
               className="flex items-center gap-4 rounded-2xl border border-white/8 bg-panel/55 p-5 hover:border-emerald-400/30 transition-colors"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300 text-sm font-semibold">
-                WA
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                <IconWhatsApp size={20} />
               </span>
               <div>
                 <p className="text-sm text-zinc-400">WhatsApp</p>
@@ -91,8 +99,9 @@ export function Contact() {
               href={profile.cv}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center rounded-full border border-violet/35 bg-violet/15 px-5 py-3 text-sm font-semibold text-violet-bright hover:bg-violet/25 transition-colors"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-violet/35 bg-violet/15 px-5 py-3 text-sm font-semibold text-violet-bright hover:bg-violet/25 transition-colors"
             >
+              <IconDownload size={16} />
               Télécharger / Voir mon CV
             </a>
           </div>
@@ -145,8 +154,9 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white hover:bg-violet-bright transition-colors"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white hover:bg-violet-bright transition-colors"
             >
+              <IconSend size={16} />
               Envoyer le message
             </button>
             {status === 'ready' ? (

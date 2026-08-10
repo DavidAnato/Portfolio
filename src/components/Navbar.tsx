@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { navLinks, profile } from '../data/content'
+import { IconMail } from './Icons'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -56,8 +57,9 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden lg:inline-flex items-center rounded-full border border-violet/40 bg-violet/10 px-4 py-2 text-sm font-medium text-violet-bright hover:bg-violet/20 transition-colors"
+          className="hidden lg:inline-flex items-center gap-2 rounded-full border border-violet/40 bg-violet/10 px-4 py-2 text-sm font-medium text-violet-bright hover:bg-violet/20 transition-colors"
         >
+          <IconMail size={14} />
           Me contacter
         </a>
 
