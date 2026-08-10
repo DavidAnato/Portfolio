@@ -141,7 +141,16 @@ export const projects: Project[] = [
     name: 'Timvio',
     category: 'professional',
     context: 'Projet réalisé dans le cadre de Zenpilote',
-    description: 'Application mobile de prise de rendez-vous.',
+    description:
+      'Application mobile de prise de rendez-vous pour salons et établissements. Gestion des créneaux, des profils, de l’authentification et des paiements, avec une API backend dédiée.',
+    highlights: [
+      'Prise de rendez-vous mobile',
+      'Gestion des salons / établissements',
+      'API REST & authentification JWT',
+      'Paiements (Stripe)',
+    ],
+    technologies: ['React Native', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Stripe'],
+    links: [{ label: 'GitHub (API)', href: 'https://github.com/DavidAnato/timvio-backend' }],
   },
   {
     name: 'OmneeFX',
@@ -153,8 +162,22 @@ export const projects: Project[] = [
   {
     name: 'Azɔtɛn',
     category: 'professional',
-    context: 'Projet professionnel',
-    description: 'Application mobile développée dans un contexte professionnel.',
+    context: 'Projet professionnel — LaToure',
+    description:
+      'Marketplace de jobs avec système d’escrow, application mobile, API et back-office admin. Plateforme complète pour publier, candidater et sécuriser les transactions liées aux missions.',
+    highlights: [
+      'Marketplace jobs',
+      'Escrow & paiements sécurisés',
+      'App mobile',
+      'API Django',
+      'Back-office admin',
+      'Messagerie & notifications',
+    ],
+    technologies: ['Django', 'Django REST Framework', 'React Native', 'Expo', 'Next.js'],
+    links: [
+      { label: 'Visiter Azɔtɛn', href: 'https://azotin.latoure.net' },
+      { label: 'GitHub', href: 'https://github.com/DavidAnato/AZOTIN' },
+    ],
   },
   {
     name: 'FAMES Bénin',
@@ -163,6 +186,36 @@ export const projects: Project[] = [
     description: 'Site web de blog et média avec frontend, backend, gestion des contenus et APIs.',
     technologies: ['React', 'Django', 'REST API'],
     links: [{ label: 'Voir le site', href: 'https://www.famesbenin.org/' }],
+  },
+  {
+    name: 'DOTO+',
+    category: 'personal',
+    badge: 'Projet de soutenance',
+    description:
+      'Écosystème santé numérique conçu comme produit complet : application patient (Doto+), hub professionnels (DotoHub), carte d’accès QR (DotoCard), back-office admin et API médicale. Gestion des dossiers, consultations, ordonnances, examens, consentement et mode urgence hors ligne.',
+    highlights: [
+      'App patient Doto+ (Expo)',
+      'DotoHub — interface professionnels',
+      'DotoCard — QR chiffré',
+      'API Django médicale',
+      'RBAC multi-rôles',
+      'Mode urgence offline',
+      'Back-office admin',
+    ],
+    technologies: [
+      'Django',
+      'Django REST Framework',
+      'PostgreSQL',
+      'JWT',
+      'React Native',
+      'Expo',
+      'TypeScript',
+    ],
+    links: [
+      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/doto-backend' },
+      { label: 'GitHub — App patient', href: 'https://github.com/DavidAnato/dotoplus' },
+      { label: 'GitHub — Hub', href: 'https://github.com/DavidAnato/dotohub' },
+    ],
   },
   {
     name: 'Connect Me',

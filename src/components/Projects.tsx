@@ -100,9 +100,13 @@ function ProjectGrid({ items, columns = 'md:grid-cols-2 lg:grid-cols-3' }: { ite
 export function Projects() {
   const featured = projects.find((p) => p.category === 'featured')
   const professional = projects.filter((p) => p.category === 'professional')
-  const personal = projects.filter((p) => p.category === 'personal')
+  const soutenance = projects.find((p) => p.badge === 'Projet de soutenance')
+  const personal = projects.filter(
+    (p) => p.category === 'personal' && p.badge !== 'Projet de soutenance',
+  )
   const ai = projects.filter((p) => p.category === 'ai')
   const featuredRef = useReveal<HTMLDivElement>()
+  const soutenanceRef = useReveal<HTMLDivElement>()
 
   return (
     <section id="projets" className="section-pad">
@@ -128,6 +132,18 @@ export function Projects() {
           </p>
           <ProjectGrid items={professional} />
         </div>
+
+        {soutenance ? (
+          <div>
+            <h3 className="font-display text-2xl font-semibold text-white mb-2">Projet de soutenance</h3>
+            <p className="text-muted mb-8 max-w-2xl">
+              Écosystème santé numérique — Doto+, DotoHub et DotoCard.
+            </p>
+            <div ref={soutenanceRef} className="reveal">
+              <ProjectCard project={soutenance} featured />
+            </div>
+          </div>
+        ) : null}
 
         <div>
           <h3 className="font-display text-2xl font-semibold text-white mb-2">Autres projets</h3>
