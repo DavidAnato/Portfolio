@@ -127,14 +127,29 @@ export const projects: Project[] = [
     name: 'Prestige Distribution',
     category: 'professional',
     context: 'Projet réalisé dans le cadre de Zenpilote',
-    description: 'Application web de distribution développée dans un contexte professionnel.',
+    description:
+      'Plateforme web de distribution e-commerce, avec boutique en ligne, gestion des produits et parcours d’achat. Intégration WordPress / WooCommerce, personnalisations via WP Code, et connexion au métier Odoo.',
+    highlights: [
+      'E-commerce WooCommerce',
+      'Intégration Odoo',
+      'Personnalisations WP Code',
+      'Parcours distribution & catalogue',
+    ],
+    technologies: ['WordPress', 'WooCommerce', 'WP Code', 'Odoo'],
     links: [{ label: 'Voir le site', href: 'https://www.prestige-distribution.eu/' }],
   },
   {
     name: 'SwimConnect',
     category: 'professional',
     context: 'Projet réalisé dans le cadre de Zenpilote',
-    description: 'Plateforme web destinée aux maîtres-nageurs et aux piscines.',
+    description:
+      'Plateforme web pour maîtres-nageurs et piscines : mise en relation, gestion des activités, parcours utilisateurs et fonctionnalités métier liées à l’organisation des cours et des structures aquatiques.',
+    highlights: [
+      'Espace maîtres-nageurs & piscines',
+      'Parcours utilisateurs métier',
+      'Gestion des activités / structures',
+      'Interface web responsive',
+    ],
     links: [{ label: 'Voir le site', href: 'https://swimconnect.zenpilote.fr/' }],
   },
   {
@@ -155,9 +170,20 @@ export const projects: Project[] = [
   {
     name: 'OmneeFX',
     category: 'professional',
-    context: 'Projet professionnel',
-    description: 'Application web développée dans un contexte métier trading / finance.',
-    links: [{ label: 'Voir le site', href: 'https://www.omneefx.com/' }],
+    context: 'Projet professionnel — LaToure',
+    description:
+      'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme.',
+    highlights: [
+      'Odoo complet',
+      'Module e-learning',
+      'Fonctionnalités métier trading / finance',
+      'Back-office & parcours utilisateurs',
+    ],
+    technologies: ['Odoo', 'Python', 'XML', 'JavaScript'],
+    links: [
+      { label: 'Voir le site', href: 'https://www.omneefx.com/' },
+      { label: 'GitHub', href: 'https://github.com/DavidAnato/OMNEEFx' },
+    ],
   },
   {
     name: 'Azɔtɛn',
@@ -183,9 +209,18 @@ export const projects: Project[] = [
     name: 'FAMES Bénin',
     category: 'professional',
     context: 'Projet Full-Stack',
-    description: 'Site web de blog et média avec frontend, backend, gestion des contenus et APIs.',
-    technologies: ['React', 'Django', 'REST API'],
-    links: [{ label: 'Voir le site', href: 'https://www.famesbenin.org/' }],
+    description:
+      'Site web de blog et média pour la Fédération des Étudiants Béninois en Chine : frontend React, backend Django, APIs REST, gestion des contenus et panel d’administration complet.',
+    highlights: [
+      'Frontend React',
+      'Backend Django & REST API',
+      'Panel admin',
+      'Gestion des contenus / blog & média',
+    ],
+    technologies: ['React', 'Django', 'Django REST Framework', 'REST API', 'Tailwind CSS'],
+    links: [
+      { label: 'GitHub — Frontend', href: 'https://github.com/DavidAnato/fames-benin-frontend' },
+    ],
   },
   {
     name: 'DOTO+',
