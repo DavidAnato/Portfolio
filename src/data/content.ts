@@ -367,7 +367,15 @@ export const skills = [
   },
   {
     category: 'Frontend',
-    items: ['React', 'React Native', 'Vue.js', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
+    items: ['React', 'Vue.js', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
+  },
+  {
+    category: 'Mobile',
+    items: ['React Native', 'Flutter', 'Flet', 'Kivy'],
+  },
+  {
+    category: 'Desktop',
+    items: ['PySide', 'PyQt', 'Kivy', 'Flet', 'Electron', 'Tkinter', 'Tauri', 'NW.js', 'Eel'],
   },
   {
     category: 'Backend',

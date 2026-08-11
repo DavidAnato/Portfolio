@@ -15,6 +15,8 @@ import {
   faGraduationCap,
   faLayerGroup,
   faMicrochip,
+  faMobileScreen,
+  faDesktop,
   faPaperPlane,
   faPhone,
   faServer,
@@ -140,6 +142,14 @@ export function IconCheck({ size, className }: IconProps) {
 
 export function IconLayout({ size, className }: IconProps) {
   return <Fa icon={faTableCellsLarge} size={size} className={className} />
+}
+
+export function IconMobile({ size, className }: IconProps) {
+  return <Fa icon={faMobileScreen} size={size} className={className} />
+}
+
+export function IconDesktop({ size, className }: IconProps) {
+  return <Fa icon={faDesktop} size={size} className={className} />
 }
 
 export function IconMessage({ size, className }: IconProps) {

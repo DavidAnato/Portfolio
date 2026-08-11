@@ -8,7 +8,9 @@ import {
   IconCode,
   IconCpu,
   IconDatabase,
+  IconDesktop,
   IconLayout,
+  IconMobile,
   IconServer,
   IconWrench,
 } from './Icons'
@@ -16,6 +18,8 @@ import {
 const skillIcons: Record<string, ComponentType<{ size?: number; className?: string }>> = {
   Langages: IconCode,
   Frontend: IconLayout,
+  Mobile: IconMobile,
+  Desktop: IconDesktop,
   Backend: IconServer,
   'Data & IA': IconBrain,
   'Base de données': IconDatabase,
