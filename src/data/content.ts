@@ -298,6 +298,34 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: 'LAHA Academia',
+    category: 'personal',
+    description:
+      'Plateforme éducative web pour la gestion et la diffusion de contenus pédagogiques : cours, ouvrages PDF, QCM, filtres par matière, classe et pays. Frontend Next.js, API Django REST, panel d’administration et suivi de progression de lecture.',
+    highlights: [
+      'Contenus pédagogiques & QCM',
+      'Lecteur PDF / ouvrages',
+      'Cours & filtrage avancé',
+      'API Django REST',
+      'Panel admin',
+      'Suivi de progression',
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Django',
+      'Django REST Framework',
+      'PostgreSQL',
+      'JWT',
+    ],
+    links: [
+      { label: 'GitHub — Frontend', href: 'https://github.com/DavidAnato/lahaacademia-frontend' },
+      { label: 'GitHub — Backend', href: 'https://github.com/DavidAnato/lahaacademia-backend' },
+    ],
+  },
+  {
     name: 'Connect Me',
     category: 'personal',
     description:
