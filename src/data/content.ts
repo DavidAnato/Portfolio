@@ -63,7 +63,7 @@ export const experiences: ExperienceItem[] = [
     period: 'Mars 2025 — Juin 2026',
     description:
       'Développement d’applications web et mobiles, intégration de fonctionnalités, tests fonctionnels, correction de bugs et amélioration des parcours utilisateurs.',
-    projects: ['Prestige Distribution', 'SwimConnect', 'Timvio'],
+    projects: ['Prestige Distribution', 'SwimConnect', 'Timvio', 'Odoo Smart Search'],
     kind: 'job',
   },
   {
@@ -184,6 +184,31 @@ export const projects: Project[] = [
     ],
     technologies: ['React Native', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Stripe'],
     links: [{ label: 'GitHub (API)', href: 'https://github.com/DavidAnato/timvio-backend' }],
+  },
+  {
+    name: 'Odoo Smart Search',
+    category: 'professional',
+    context: 'Projet réalisé dans le cadre de Zenpilote',
+    description:
+      'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention plutôt que par mot-clé, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
+    highlights: [
+      'Recherche sémantique / vectorielle',
+      'Scraping & indexation apps.odoo.com',
+      'Traduction multilingue',
+      'Filtres métier Odoo',
+      'API FastAPI + frontend React',
+    ],
+    technologies: [
+      'Python',
+      'FastAPI',
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'sentence-transformers',
+      'SQLAlchemy',
+    ],
+    links: [{ label: 'Visiter OSS', href: 'https://oss.zenpilote.fr/' }],
   },
   {
     name: 'OmneeFX',
@@ -439,6 +464,8 @@ export const skills = [
       'Django REST Framework',
       'Node.js',
       'Express.js',
+      'AdonisJS',
+      'FastAPI',
       'REST APIs',
       'Django Channels',
       'WebSockets',
