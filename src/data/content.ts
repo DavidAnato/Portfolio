@@ -271,6 +271,33 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: 'WISORIA',
+    category: 'personal',
+    description:
+      'Plateforme e-learning complète : parcours de formation, cours, quiz, certification et suivi d’apprentissage. Écosystème web et mobile avec API Django, application React Native / Expo, outil de création de cours et module de certificats.',
+    highlights: [
+      'App mobile Expo / React Native',
+      'API Django REST',
+      'Cours & parcours',
+      'Quiz & certification',
+      'Création de contenus',
+      'Administration',
+    ],
+    technologies: [
+      'React Native',
+      'Expo',
+      'Django',
+      'Django REST Framework',
+      'JWT',
+      'Vue.js',
+      'React',
+    ],
+    links: [
+      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/wisoria-api' },
+      { label: 'GitHub — Mobile', href: 'https://github.com/DavidAnato/wisoria-mobile' },
+    ],
+  },
+  {
     name: 'Connect Me',
     category: 'personal',
     description:
