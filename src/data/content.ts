@@ -244,7 +244,7 @@ export const projects: Project[] = [
     ],
     technologies: ['Django', 'Django REST Framework', 'React Native', 'Expo', 'Next.js'],
     links: [
-      { label: 'Visiter Azɔtɛn', href: 'https://azotin.latoure.net' },
+      { label: 'Visiter Azɔtɛn', href: 'https://azoten.surge.sh/' },
       { label: 'GitHub', href: 'https://github.com/DavidAnato/AZOTIN' },
     ],
   },
