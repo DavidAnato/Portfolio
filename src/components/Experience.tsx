@@ -12,7 +12,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Expérience"
           title="Parcours professionnel"
-          description="Des missions concrètes en développement d’applications web et mobiles, avec une capacité à intervenir sur toute la stack."
+          description="Des missions concrètes en développement web, mobile et Odoo, avec une capacité à intervenir sur toute la stack."
         />
 
         <div ref={ref} className="reveal relative space-y-6">
@@ -71,7 +71,11 @@ export function Experience() {
                   {item.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300"
+                      className={
+                        /odoo/i.test(tech)
+                          ? 'rounded-full border border-violet/35 bg-violet/15 px-3 py-1 text-xs font-medium text-violet-bright'
+                          : 'rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300'
+                      }
                     >
                       {tech}
                     </span>

@@ -95,7 +95,7 @@ export function Navbar() {
       <div
         id="mobile-menu"
         className={`lg:hidden overflow-hidden border-t border-white/5 transition-[max-height,opacity] duration-300 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <ul className="container-narrow px-5 sm:px-8 py-4 space-y-1">

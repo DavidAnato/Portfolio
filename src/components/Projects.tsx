@@ -54,14 +54,21 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 
       {project.technologies?.length ? (
         <div className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full border border-white/10 bg-ink/40 px-3 py-1 text-xs text-zinc-300"
-            >
-              {tech}
-            </span>
-          ))}
+          {project.technologies.map((tech) => {
+              const isOdoo = /odoo/i.test(tech)
+              return (
+                <span
+                  key={tech}
+                  className={
+                    isOdoo
+                      ? 'rounded-full border border-violet/35 bg-violet/15 px-3 py-1 text-xs font-medium text-violet-bright'
+                      : 'rounded-full border border-white/10 bg-ink/40 px-3 py-1 text-xs text-zinc-300'
+                  }
+                >
+                  {tech}
+                </span>
+              )
+            })}
         </div>
       ) : null}
 
@@ -117,7 +124,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Projets"
             title="Sélection de réalisations"
-            description="Du produit principal aux missions professionnelles, en passant par les expérimentations personnelles et l’IA."
+            description="Du produit principal aux missions Odoo et professionnelles, en passant par les expérimentations personnelles et l’IA."
           />
 
           {featured ? (
@@ -130,7 +137,7 @@ export function Projects() {
         <div>
           <h3 className="font-display text-2xl font-semibold text-white mb-2">Projets professionnels</h3>
           <p className="text-muted mb-8 max-w-2xl">
-            Missions et livraisons réalisées en contexte entreprise ou client.
+            Missions et livraisons en contexte entreprise — Odoo, web, mobile et APIs.
           </p>
           <ProjectGrid items={professional} />
         </div>

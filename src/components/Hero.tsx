@@ -1,6 +1,6 @@
 import { profile } from '../data/content'
 import { useReveal } from '../hooks/useReveal'
-import { IconDownload, IconFolder, IconMail } from './Icons'
+import { IconCubes, IconDownload, IconMail } from './Icons'
 
 export function Hero() {
   const ref = useReveal<HTMLDivElement>()
@@ -39,10 +39,16 @@ export function Hero() {
 
             <div className="mt-9 flex flex-wrap gap-3">
               <a
-                href="#projets"
+                href="#odoo"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white hover:bg-violet-bright transition-colors shadow-lg shadow-violet/25"
               >
-                <IconFolder size={16} />
+                <IconCubes size={16} />
+                Expertise Odoo
+              </a>
+              <a
+                href="#projets"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              >
                 Voir mes projets
               </a>
               <a
@@ -64,7 +70,12 @@ export function Hero() {
             </div>
 
             <p className="mt-10 text-sm text-zinc-500 tracking-wide">
-              {profile.stackLine.join(' · ')}
+              {profile.stackLine.map((item, index) => (
+                <span key={item}>
+                  {index > 0 ? ' · ' : null}
+                  <span className={item === 'Odoo' ? 'text-violet-bright font-medium' : undefined}>{item}</span>
+                </span>
+              ))}
             </p>
           </div>
 

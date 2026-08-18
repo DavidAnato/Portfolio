@@ -1,11 +1,11 @@
 export const profile = {
   name: 'David Anato',
-  title: 'Développeur Full-Stack & IA',
-  tags: ['Web', 'Mobile', 'Backend', 'APIs', 'Real-Time', 'AI'],
+  title: 'Développeur Full-Stack · Odoo & IA',
+  tags: ['Odoo', 'Web', 'Mobile', 'Backend', 'APIs', 'IA'],
   availability: 'Disponible pour des opportunités remote',
   heroText:
-    'Développeur Full-Stack spécialisé dans la conception et le développement d’applications web et mobiles, avec une expérience en frontend, backend, APIs REST et systèmes temps réel. Je travaille principalement avec Python/Django, React, React Native, Vue.js et Node.js, de l’architecture au déploiement. Je m’intéresse également à l’intégration de l’IA, notamment le Machine Learning, les LLM, le RAG et les agents IA.',
-  stackLine: ['Python', 'Django', 'React', 'React Native', 'Vue.js', 'Node.js', 'IA'],
+    'Développeur Full-Stack et Odoo : je conçois des applications web et mobiles, et je développe des modules Odoo métier — modèles Python, vues XML/QWeb, personnalisations ERP et intégrations (e-commerce, APIs). Stack principale : Python/Django, Odoo, React, React Native, Vue.js et Node.js, de l’architecture au déploiement. J’intègre aussi l’IA (LLM, RAG, recherche sémantique) là où elle accélère vraiment le métier.',
+  stackLine: ['Odoo', 'Python', 'Django', 'React', 'React Native', 'Vue.js', 'Node.js', 'IA'],
   email: 'david1anato@gmail.com',
   phone: '+229 01 56 54 38 80',
   phoneHref: 'tel:+2290156543880',
@@ -18,20 +18,55 @@ export const profile = {
 
 export const about = {
   lead:
-    'Je conçois et développe des applications de bout en bout — de l’architecture aux interfaces, des APIs au déploiement — avec une attention particulière à la qualité du code et à l’expérience utilisateur.',
+    'Je conçois et développe des applications de bout en bout — de l’architecture aux interfaces, des APIs au déploiement — avec une expertise particulière sur Odoo (modules custom, ERP, intégrations) et une attention constante à la qualité du code.',
   points: [
+    {
+      title: 'Odoo & ERP',
+      text: 'Modules custom, personnalisation métier (achats, facturation, e-learning), vues XML/QWeb, ORM Python et connexions e-commerce / APIs.',
+    },
     {
       title: 'Chaîne complète',
       text: 'Conception, architecture, frontend, backend, APIs, bases de données, temps réel, mobile et déploiement.',
     },
     {
-      title: 'Produit & résolution',
-      text: 'Autonomie, apprentissage continu et focus sur la création de produits utiles plutôt que sur des démonstrations techniques.',
+      title: 'Produit & qualité',
+      text: 'Autonomie, code maintenable, parcours utilisateurs soignés, et IA uniquement là où elle apporte une vraie valeur métier.',
+    },
+  ],
+} as const
+
+export const odooExpertise = {
+  lead:
+    'Je développe et personnalise Odoo comme un vrai produit métier : modules, parcours utilisateurs, back-office et ponts avec le reste de la stack (web, e-commerce, IA).',
+  capabilities: [
+    {
+      title: 'Modules custom',
+      text: 'Modèles Python, sécurité, vues XML, QWeb et logique métier adaptée au processus client.',
     },
     {
-      title: 'Qualité',
-      text: 'Code maintenable, parcours utilisateurs soignés, et intégration progressive de l’IA là où elle apporte une vraie valeur.',
+      title: 'Personnalisation ERP',
+      text: 'Achats, factures, e-learning, trading/finance — adapter Odoo au métier plutôt que l’inverse.',
     },
+    {
+      title: 'Intégrations',
+      text: 'WooCommerce, APIs REST, sites vitrine et flux de données entre Odoo et les applications existantes.',
+    },
+    {
+      title: 'Odoo + IA',
+      text: 'Recherche sémantique sur l’écosystème apps.odoo.com, indexation vectorielle et filtres métier.',
+    },
+  ],
+  stack: [
+    'Odoo',
+    'Python ORM',
+    'XML / QWeb',
+    'JavaScript / OWL',
+    'PostgreSQL',
+    'Website Builder',
+    'e-Learning',
+    'Achats & facturation',
+    'WooCommerce',
+    'REST APIs',
   ],
 } as const
 
@@ -52,8 +87,9 @@ export const experiences: ExperienceItem[] = [
     role: 'Développeur Full-Stack',
     period: 'Août 2024 — Présent',
     description:
-      'Développement et maintenance de solutions web, avec intervention sur le frontend, le backend, les APIs et les fonctionnalités métier.',
+      'Développement et maintenance de solutions web et Odoo : modules métier, e-learning, back-office, frontend, backend et APIs — notamment la plateforme OmneeFX (trading / finance).',
     projects: ['OmneeFX', 'Azɔtɛn'],
+    technologies: ['Odoo', 'Python', 'XML', 'JavaScript', 'Django', 'React Native'],
     current: true,
     kind: 'job',
   },
@@ -62,8 +98,9 @@ export const experiences: ExperienceItem[] = [
     role: 'Développeur d’applications',
     period: 'Mars 2025 — Juin 2026',
     description:
-      'Développement d’applications web et mobiles, intégration de fonctionnalités, tests fonctionnels, correction de bugs et amélioration des parcours utilisateurs.',
+      'Développement d’applications web et mobiles, intégrations Odoo (e-commerce WooCommerce, recherche sémantique apps.odoo.com), tests fonctionnels et amélioration des parcours utilisateurs.',
     projects: ['Prestige Distribution', 'SwimConnect', 'Timvio', 'Odoo Smart Search'],
+    technologies: ['Odoo', 'WordPress', 'WooCommerce', 'Python', 'FastAPI', 'React Native'],
     kind: 'job',
   },
   {
@@ -107,6 +144,7 @@ export type Project = {
   links?: ProjectLink[]
   context?: string
   status?: string
+  odoo?: boolean
 }
 
 export const projects: Project[] = [
@@ -142,8 +180,58 @@ export const projects: Project[] = [
     links: [{ label: 'Visiter FOTOCE', href: 'https://fotoce.app' }],
   },
   {
+    name: 'OmneeFX',
+    category: 'professional',
+    odoo: true,
+    badge: 'Odoo · Projet phare',
+    context: 'Projet professionnel — LaToure',
+    description:
+      'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme : modèles, vues, parcours back-office et site.',
+    highlights: [
+      'Plateforme Odoo complète',
+      'Modules métier trading / finance',
+      'Module e-learning',
+      'Back-office & parcours utilisateurs',
+    ],
+    technologies: ['Odoo', 'Python', 'XML', 'QWeb', 'JavaScript', 'PostgreSQL'],
+    links: [
+      { label: 'Voir le site', href: 'https://www.omneefx.com/' },
+      { label: 'GitHub', href: 'https://github.com/DavidAnato/OMNEEFx' },
+    ],
+  },
+  {
+    name: 'Odoo Smart Search',
+    category: 'professional',
+    odoo: true,
+    badge: 'Odoo · IA',
+    context: 'Projet réalisé dans le cadre de Zenpilote',
+    description:
+      'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention plutôt que par mot-clé, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
+    highlights: [
+      'Recherche sémantique / vectorielle',
+      'Scraping & indexation apps.odoo.com',
+      'Traduction multilingue',
+      'Filtres métier Odoo',
+      'API FastAPI + frontend React',
+    ],
+    technologies: [
+      'Odoo',
+      'Python',
+      'FastAPI',
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'sentence-transformers',
+      'SQLAlchemy',
+    ],
+    links: [{ label: 'Visiter OSS', href: 'https://oss.zenpilote.fr/' }],
+  },
+  {
     name: 'Prestige Distribution',
     category: 'professional',
+    odoo: true,
+    badge: 'Odoo · Intégration',
     context: 'Projet réalisé dans le cadre de Zenpilote',
     description:
       'Plateforme web de distribution e-commerce, avec boutique en ligne, gestion des produits et parcours d’achat. Intégration WordPress / WooCommerce, personnalisations via WP Code, et connexion au métier Odoo.',
@@ -153,8 +241,24 @@ export const projects: Project[] = [
       'Personnalisations WP Code',
       'Parcours distribution & catalogue',
     ],
-    technologies: ['WordPress', 'WooCommerce', 'WP Code', 'Odoo'],
+    technologies: ['Odoo', 'WordPress', 'WooCommerce', 'WP Code'],
     links: [{ label: 'Voir le site', href: 'https://www.prestige-distribution.eu/' }],
+  },
+  {
+    name: 'Odoo Module Rhys',
+    category: 'professional',
+    odoo: true,
+    badge: 'Module Odoo',
+    description:
+      'Module Odoo custom (v13) : assistant vocal et snippet Website Builder. Structure complète d’un add-on (manifest, modèles Python, vues XML, droits d’accès).',
+    highlights: [
+      'Module Odoo 13 installable',
+      'Modèles Python & vues XML',
+      'Snippet Website Builder',
+      'Sécurité / ACL',
+    ],
+    technologies: ['Odoo', 'Python', 'XML', 'QWeb'],
+    links: [{ label: 'GitHub', href: 'https://github.com/DavidAnato/Odoo-Module-Rhys' }],
   },
   {
     name: 'SwimConnect',
@@ -186,49 +290,6 @@ export const projects: Project[] = [
     links: [{ label: 'GitHub (API)', href: 'https://github.com/DavidAnato/timvio-backend' }],
   },
   {
-    name: 'Odoo Smart Search',
-    category: 'professional',
-    context: 'Projet réalisé dans le cadre de Zenpilote',
-    description:
-      'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention plutôt que par mot-clé, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
-    highlights: [
-      'Recherche sémantique / vectorielle',
-      'Scraping & indexation apps.odoo.com',
-      'Traduction multilingue',
-      'Filtres métier Odoo',
-      'API FastAPI + frontend React',
-    ],
-    technologies: [
-      'Python',
-      'FastAPI',
-      'React',
-      'TypeScript',
-      'Vite',
-      'Tailwind CSS',
-      'sentence-transformers',
-      'SQLAlchemy',
-    ],
-    links: [{ label: 'Visiter OSS', href: 'https://oss.zenpilote.fr/' }],
-  },
-  {
-    name: 'OmneeFX',
-    category: 'professional',
-    context: 'Projet professionnel — LaToure',
-    description:
-      'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme.',
-    highlights: [
-      'Odoo complet',
-      'Module e-learning',
-      'Fonctionnalités métier trading / finance',
-      'Back-office & parcours utilisateurs',
-    ],
-    technologies: ['Odoo', 'Python', 'XML', 'JavaScript'],
-    links: [
-      { label: 'Voir le site', href: 'https://www.omneefx.com/' },
-      { label: 'GitHub', href: 'https://github.com/DavidAnato/OMNEEFx' },
-    ],
-  },
-  {
     name: 'Azɔtɛn',
     category: 'professional',
     context: 'Projet professionnel — LaToure',
@@ -245,7 +306,9 @@ export const projects: Project[] = [
     technologies: ['Django', 'Django REST Framework', 'React Native', 'Expo', 'Next.js'],
     links: [
       { label: 'Visiter Azɔtɛn', href: 'https://azoten.surge.sh/' },
-      { label: 'GitHub', href: 'https://github.com/DavidAnato/AZOTIN' },
+      { label: 'GitHub — App', href: 'https://github.com/DavidAnato/AZOTIN' },
+      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/azotin-backend' },
+      { label: 'GitHub — Admin', href: 'https://github.com/DavidAnato/azotin-backoffice' },
     ],
   },
   {
@@ -293,6 +356,8 @@ export const projects: Project[] = [
       { label: 'GitHub — API', href: 'https://github.com/DavidAnato/doto-backend' },
       { label: 'GitHub — App patient', href: 'https://github.com/DavidAnato/dotoplus' },
       { label: 'GitHub — Hub', href: 'https://github.com/DavidAnato/dotohub' },
+      { label: 'GitHub — Hub mobile', href: 'https://github.com/DavidAnato/dotohub-mobile' },
+      { label: 'GitHub — Admin', href: 'https://github.com/DavidAnato/dotoplus-admin' },
     ],
   },
   {
@@ -301,7 +366,7 @@ export const projects: Project[] = [
     description:
       'Plateforme e-learning web et mobile : cours, parcours, quiz et certification.',
     links: [
-      { label: 'GitHub', href: 'https://github.com/DavidAnato/wisoria-api' },
+      { label: 'GitHub — Mobile', href: 'https://github.com/DavidAnato/wisoria-mobile' },
     ],
   },
   {
@@ -314,10 +379,32 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: 'AgriConnect',
+    category: 'personal',
+    description:
+      'Marketplace agricole : mise en relation producteurs / consommateurs, catalogue, panier, commandes, dashboards producteur, consommateur et admin.',
+    highlights: [
+      'Espaces producteur & consommateur',
+      'Catalogue, panier et checkout',
+      'Back-office admin',
+      'API Python dédiée',
+    ],
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Python'],
+    links: [
+      { label: 'Voir le site', href: 'https://agriconnect-mu-one.vercel.app' },
+      { label: 'GitHub — Frontend', href: 'https://github.com/DavidAnato/AgriConnect' },
+      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/AgriConnectBackend' },
+    ],
+  },
+  {
     name: 'Connect Me',
     category: 'personal',
     description:
       'Application web facilitant l’obtention et le partage de contacts via WhatsApp.',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/DavidAnato/contact-pick' },
+      { label: 'Voir le site', href: 'https://davidanato.github.io/contact-pick/' },
+    ],
   },
   {
     name: 'Royal Computer',
@@ -364,6 +451,14 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: 'Elek-Store',
+    category: 'personal',
+    description:
+      'API REST Django pour une boutique e-commerce : catalogue, commandes et endpoints métier.',
+    technologies: ['Python', 'Django', 'Django REST Framework'],
+    links: [{ label: 'GitHub', href: 'https://github.com/DavidAnato/elek-store-api' }],
+  },
+  {
     name: 'Traduction Français → Fong',
     category: 'ai',
     description:
@@ -404,6 +499,21 @@ export const projects: Project[] = [
 ]
 
 export const skills = [
+  {
+    category: 'Odoo & ERP',
+    items: [
+      'Odoo',
+      'Modules custom',
+      'Python ORM',
+      'Vues XML / QWeb',
+      'OWL / JavaScript',
+      'Website Builder',
+      'e-Learning',
+      'Achats & facturation',
+      'Intégrations WooCommerce',
+      'PostgreSQL',
+    ],
+  },
   {
     category: 'Langages',
     items: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS', 'SQL'],
@@ -467,7 +577,7 @@ export const skills = [
   },
   {
     category: 'Autres',
-    items: ['Odoo', 'Postman', 'Figma', 'Progressive Web Apps', 'UI/UX', 'Tests & débogage'],
+    items: ['Postman', 'Figma', 'Progressive Web Apps', 'UI/UX', 'Tests & débogage'],
   },
 ] as const
 
@@ -487,6 +597,7 @@ export const education = [
 export const navLinks = [
   { href: '#accueil', label: 'Accueil' },
   { href: '#apropos', label: 'À propos' },
+  { href: '#odoo', label: 'Odoo' },
   { href: '#experience', label: 'Expérience' },
   { href: '#projets', label: 'Projets' },
   { href: '#competences', label: 'Compétences' },
