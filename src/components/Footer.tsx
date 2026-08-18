@@ -1,5 +1,5 @@
 import { profile } from '../data/content'
-import { IconArrowUp, IconGithub, IconMail } from './Icons'
+import { IconArrowUp, IconGithub, IconLinkedIn, IconMail } from './Icons'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -11,6 +11,15 @@ export function Footer() {
           © {year} {profile.name}. Tous droits réservés.
         </p>
         <div className="flex items-center gap-4 text-sm">
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors"
+          >
+            <IconLinkedIn size={14} />
+            LinkedIn
+          </a>
           <a
             href={profile.github}
             target="_blank"

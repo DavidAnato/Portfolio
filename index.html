@@ -28,7 +28,16 @@
       name="twitter:description"
       content="Développeur Full-Stack & IA — web, mobile, backend, APIs, real-time et IA."
     />
-    <meta name="twitter:image" content="https://davidanato.github.io/Portfolio/image.png" />
+    <meta name="twitter:image" content="https://davidanato.github.io/Portfolio/image.png"     />
+
+    <script>
+      try {
+        var t = localStorage.getItem('portfolio-theme')
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,7 +62,7 @@
               "addressLocality": "Cotonou",
               "addressCountry": "BJ"
             },
-            "sameAs": ["https://github.com/DavidAnato"],
+            "sameAs": ["https://github.com/DavidAnato", "https://www.linkedin.com/in/davidanato/"],
             "knowsAbout": [
               "Full-Stack Development",
               "React",

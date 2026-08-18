@@ -63,9 +63,6 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="mt-10 text-sm text-zinc-500 tracking-wide">
-              {profile.stackLine.join(' · ')}
-            </p>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
@@ -82,7 +79,7 @@ export function Hero() {
                 className="aspect-square w-full object-cover"
                 fetchPriority="high"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent p-5 pt-16">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-5 pt-16 photo-caption">
                 <p className="font-display text-lg font-semibold text-white">{profile.name}</p>
                 <p className="text-sm text-zinc-300">{profile.title}</p>
               </div>

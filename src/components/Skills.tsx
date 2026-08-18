@@ -12,6 +12,7 @@ import {
   IconLayout,
   IconMobile,
   IconServer,
+  IconUsers,
   IconWrench,
 } from './Icons'
 
@@ -25,6 +26,7 @@ const skillIcons: Record<string, ComponentType<{ size?: number; className?: stri
   'Base de données': IconDatabase,
   DevOps: IconCloud,
   Autres: IconWrench,
+  'Compétences passives': IconUsers,
 }
 
 export function Skills() {
@@ -36,16 +38,21 @@ export function Skills() {
         <SectionHeading
           eyebrow="Compétences"
           title="Stack technique"
-          description="Une vue claire des technologies utilisées au quotidien — sans pourcentages arbitraires."
+          description="Frontend, backend, mobile, data et outillage pour concevoir et livrer des produits."
         />
 
         <div ref={ref} className="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {skills.map((group) => {
             const GroupIcon = skillIcons[group.category] ?? IconCpu
+            const wide = group.category === 'Compétences passives'
             return (
               <div
                 key={group.category}
-                className="rounded-2xl border border-white/8 bg-panel/50 p-5 sm:p-6 hover:border-violet/25 transition-colors"
+                className={
+                  wide
+                    ? 'rounded-2xl border border-white/8 bg-panel/50 p-5 sm:p-6 hover:border-violet/25 transition-colors sm:col-span-2 lg:col-span-3'
+                    : 'rounded-2xl border border-white/8 bg-panel/50 p-5 sm:p-6 hover:border-violet/25 transition-colors'
+                }
               >
                 <h3 className="font-display text-base font-semibold text-violet-bright mb-4 inline-flex items-center gap-2">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-violet/25 bg-violet/10">

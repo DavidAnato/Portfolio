@@ -5,25 +5,33 @@ import { useReveal } from '../hooks/useReveal'
 import {
   IconDownload,
   IconGithub,
+  IconLinkedIn,
   IconMail,
   IconPhone,
   IconSend,
   IconWhatsApp,
 } from './Icons'
 
+const emailOk = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+
 export function Contact() {
   const ref = useReveal<HTMLDivElement>()
   const [status, setStatus] = useState<'idle' | 'ready'>('idle')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const canSubmit =
+    name.trim().length >= 2 && emailOk(email.trim()) && message.trim().length >= 10
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const form = new FormData(e.currentTarget)
-    const name = String(form.get('name') || '').trim()
-    const email = String(form.get('email') || '').trim()
-    const message = String(form.get('message') || '').trim()
+    if (!canSubmit) return
 
-    const subject = encodeURIComponent(`Contact portfolio — ${name}`)
-    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
+    const subject = encodeURIComponent(`Contact portfolio — ${name.trim()}`)
+    const body = encodeURIComponent(
+      `Nom: ${name.trim()}\nEmail: ${email.trim()}\n\nMessage:\n${message.trim()}`,
+    )
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
     setStatus('ready')
   }
@@ -49,6 +57,21 @@ export function Contact() {
               <div>
                 <p className="text-sm text-zinc-400">Email</p>
                 <p className="text-white font-medium break-all">{profile.email}</p>
+              </div>
+            </a>
+
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 rounded-2xl border border-white/8 bg-panel/55 p-5 hover:border-violet/35 transition-colors"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0A66C2]/15 text-[#0A66C2]">
+                <IconLinkedIn size={20} />
+              </span>
+              <div>
+                <p className="text-sm text-zinc-400">LinkedIn</p>
+                <p className="text-white font-medium">linkedin.com/in/davidanato</p>
               </div>
             </a>
 
@@ -121,6 +144,8 @@ export function Contact() {
                 type="text"
                 required
                 autoComplete="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-white placeholder:text-zinc-600 focus:border-violet/50 focus:outline-none"
                 placeholder="Votre nom"
               />
@@ -135,6 +160,8 @@ export function Contact() {
                 type="email"
                 required
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-white placeholder:text-zinc-600 focus:border-violet/50 focus:outline-none"
                 placeholder="vous@exemple.com"
               />
@@ -148,17 +175,32 @@ export function Contact() {
                 name="message"
                 required
                 rows={5}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-white placeholder:text-zinc-600 focus:border-violet/50 focus:outline-none resize-y min-h-32"
                 placeholder="Parlez-moi de votre projet ou de l’opportunité…"
               />
             </div>
             <button
               type="submit"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white hover:bg-violet-bright transition-colors"
+              disabled={!canSubmit}
+              aria-disabled={!canSubmit}
+              className={
+                canSubmit
+                  ? 'cta-ready inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white'
+                  : 'inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-zinc-700/80 px-6 py-3 text-sm font-semibold text-zinc-400 cursor-not-allowed opacity-60'
+              }
             >
               <IconSend size={16} />
               Envoyer le message
             </button>
+            {!canSubmit ? (
+              <p className="text-xs text-zinc-500">
+                Renseignez le nom, un email valide et un message (10 caractères min.) pour activer l’envoi.
+              </p>
+            ) : (
+              <p className="text-xs text-violet-bright">Formulaire prêt — vous pouvez envoyer.</p>
+            )}
             {status === 'ready' ? (
               <p className="text-sm text-zinc-400" role="status">
                 Ouverture de votre client email…

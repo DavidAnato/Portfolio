@@ -134,7 +134,7 @@ export function Projects() {
             <p className="text-muted mb-8 max-w-2xl">
               Quelques missions et modules réalisés avec Odoo, parmi d’autres livraisons.
             </p>
-            <ProjectGrid items={odoo} />
+            <ProjectGrid items={odoo} columns="md:grid-cols-2" />
           </div>
         ) : null}
 
@@ -143,7 +143,7 @@ export function Projects() {
           <p className="text-muted mb-8 max-w-2xl">
             Missions et livraisons réalisées en contexte entreprise ou client.
           </p>
-          <ProjectGrid items={professional} />
+          <ProjectGrid items={professional} columns="md:grid-cols-2" />
         </div>
 
         {soutenance ? (
@@ -163,7 +163,7 @@ export function Projects() {
           <p className="text-muted mb-8 max-w-2xl">
             Projets personnels et expérimentaux — e-commerce, sites vitrines et plateformes web.
           </p>
-          <ProjectGrid items={personal} />
+          <ProjectGrid items={personal} columns="md:grid-cols-2 lg:grid-cols-3" />
         </div>
 
         <div>

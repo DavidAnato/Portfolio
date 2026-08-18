@@ -24,8 +24,11 @@ import {
   faUpRightFromSquare,
   faWandMagicSparkles,
   faWrench,
+  faSun,
+  faMoon,
+  faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faBrain } from '@fortawesome/free-solid-svg-icons'
 
 type IconProps = {
@@ -58,6 +61,10 @@ export function IconMail({ size, className }: IconProps) {
 
 export function IconGithub({ size, className }: IconProps) {
   return <Fa icon={faGithub} size={size} className={className} />
+}
+
+export function IconLinkedIn({ size, className }: IconProps) {
+  return <Fa icon={faLinkedin} size={size} className={className} />
 }
 
 export function IconPhone({ size, className }: IconProps) {
@@ -150,6 +157,18 @@ export function IconMobile({ size, className }: IconProps) {
 
 export function IconDesktop({ size, className }: IconProps) {
   return <Fa icon={faDesktop} size={size} className={className} />
+}
+
+export function IconUsers({ size, className }: IconProps) {
+  return <Fa icon={faUserGroup} size={size} className={className} />
+}
+
+export function IconSun({ size, className }: IconProps) {
+  return <Fa icon={faSun} size={size} className={className} />
+}
+
+export function IconMoon({ size, className }: IconProps) {
+  return <Fa icon={faMoon} size={size} className={className} />
 }
 
 export function IconMessage({ size, className }: IconProps) {

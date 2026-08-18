@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { navLinks, profile } from '../data/content'
-import { IconMail } from './Icons'
+import { IconMail, IconMoon, IconSun } from './Icons'
+import { useTheme } from '../hooks/useTheme'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { theme, toggle } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -55,22 +57,30 @@ export function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden lg:inline-flex items-center gap-2 rounded-full border border-violet/40 bg-violet/10 px-4 py-2 text-sm font-medium text-violet-bright hover:bg-violet/20 transition-colors"
-        >
-          <IconMail size={14} />
-          Me contacter
-        </a>
-
-        <button
-          type="button"
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white"
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggle}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white hover:border-violet/40 hover:bg-violet/10 transition-colors"
+            aria-label={theme === 'dark' ? 'Activer le thème clair' : 'Activer le thème sombre'}
+          >
+            {theme === 'dark' ? <IconSun size={16} /> : <IconMoon size={16} />}
+          </button>
+          <a
+            href="#contact"
+            className="hidden lg:inline-flex items-center gap-2 rounded-full border border-violet/40 bg-violet/10 px-4 py-2 text-sm font-medium text-violet-bright hover:bg-violet/20 transition-colors"
+          >
+            <IconMail size={14} />
+            Me contacter
+          </a>
+          <button
+            type="button"
+            className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
-          onClick={() => setOpen((v) => !v)}
-        >
+            onClick={() => setOpen((v) => !v)}
+          >
           <span className="sr-only">Menu</span>
           <span className="relative block h-3.5 w-5">
             <span
@@ -90,6 +100,7 @@ export function Navbar() {
             />
           </span>
         </button>
+        </div>
       </nav>
 
       <div

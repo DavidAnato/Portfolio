@@ -11,6 +11,7 @@ export const profile = {
   phoneHref: 'tel:+2290156543880',
   whatsapp: 'https://wa.me/22956543880',
   github: 'https://github.com/DavidAnato',
+  linkedin: 'https://www.linkedin.com/in/davidanato/',
   cv: `${import.meta.env.BASE_URL}DavidAnato_CV.pdf`,
   photo: `${import.meta.env.BASE_URL}image.png`,
   location: 'Cotonou, Bénin',
@@ -326,7 +327,14 @@ export const projects: Project[] = [
     name: 'WISORIA',
     category: 'personal',
     description:
-      'Plateforme e-learning web et mobile : cours, parcours, quiz et certification.',
+      'Plateforme e-learning web et mobile : cours, parcours, quiz et certification pour suivre sa progression et valider des compétences.',
+    highlights: [
+      'App mobile (Expo)',
+      'Cours et parcours',
+      'Quiz & certification',
+      'Suivi de progression',
+    ],
+    technologies: ['React Native', 'TypeScript', 'Expo'],
     links: [
       { label: 'GitHub — Mobile', href: 'https://github.com/DavidAnato/wisoria-mobile' },
     ],
@@ -335,7 +343,14 @@ export const projects: Project[] = [
     name: 'LAHA Academia',
     category: 'personal',
     description:
-      'Plateforme éducative pour la gestion et la diffusion de contenus pédagogiques, cours et ouvrages.',
+      'Plateforme éducative pour la gestion et la diffusion de contenus pédagogiques, cours et ouvrages auprès des apprenants.',
+    highlights: [
+      'Catalogue de cours',
+      'Diffusion de contenus',
+      'Gestion des ouvrages',
+      'Interface éducative',
+    ],
+    technologies: ['React', 'JavaScript', 'CSS'],
     links: [
       { label: 'GitHub', href: 'https://github.com/DavidAnato/lahaacademia-frontend' },
     ],
@@ -362,7 +377,14 @@ export const projects: Project[] = [
     name: 'Connect Me',
     category: 'personal',
     description:
-      'Application web facilitant l’obtention et le partage de contacts via WhatsApp.',
+      'Application web facilitant l’obtention et le partage de contacts via WhatsApp, avec un parcours simple et un déploiement statique.',
+    highlights: [
+      'Partage de contacts',
+      'Lien WhatsApp',
+      'Interface web légère',
+      'Déploiement GitHub Pages',
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
     links: [
       { label: 'GitHub', href: 'https://github.com/DavidAnato/contact-pick' },
       { label: 'Voir le site', href: 'https://davidanato.github.io/contact-pick/' },
@@ -372,7 +394,14 @@ export const projects: Project[] = [
     name: 'Royal Computer',
     category: 'personal',
     description:
-      'Plateforme e-commerce spécialisée dans la vente d’ordinateurs et de produits électroniques.',
+      'Plateforme e-commerce Django spécialisée dans la vente d’ordinateurs et de produits électroniques, avec authentification, panier et blog.',
+    highlights: [
+      'Catalogue produits',
+      'Panier & commandes',
+      'Authentification',
+      'Espace blog',
+    ],
+    technologies: ['Python', 'Django', 'HTML', 'CSS'],
     links: [
       { label: 'GitHub', href: 'https://github.com/DavidAnato/royal-computer' },
     ],
@@ -381,13 +410,28 @@ export const projects: Project[] = [
     name: 'EwaTiwa',
     category: 'personal',
     description:
-      'Site e-commerce spécialisé dans les produits cosmétiques pour peaux noires et métissées.',
+      'Site e-commerce spécialisé dans les produits cosmétiques pour peaux noires et métissées, du catalogue au parcours d’achat.',
+    highlights: [
+      'Boutique en ligne',
+      'Catalogue cosmétique',
+      'Parcours d’achat',
+      'Mise en avant produit',
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
     links: [{ label: 'Voir le site', href: 'https://ewatiwa.com/' }],
   },
   {
     name: 'Bethel Sarl',
     category: 'personal',
-    description: 'Site vitrine développé pour une entreprise d’impression.',
+    description:
+      'Site vitrine pour une entreprise d’impression : présentation des services, identité visuelle et pages responsive.',
+    highlights: [
+      'Site vitrine',
+      'Présentation des services',
+      'Design responsive',
+      'Déploiement GitHub Pages',
+    ],
+    technologies: ['HTML', 'CSS'],
     links: [
       { label: 'Voir le site', href: 'https://davidanato.github.io/Bethele-Sarl/' },
       { label: 'GitHub', href: 'https://github.com/DavidAnato/Bethele-Sarl' },
@@ -397,7 +441,14 @@ export const projects: Project[] = [
     name: 'AnimeVerse',
     category: 'personal',
     description:
-      'Plateforme web d’exploration d’animes avec recherche, filtrage et présentation détaillée.',
+      'Plateforme web d’exploration d’animes avec recherche, filtrage et fiches détaillées pour découvrir et comparer les titres.',
+    highlights: [
+      'Recherche d’animes',
+      'Filtres de catalogue',
+      'Fiches détaillées',
+      'Interface Bootstrap',
+    ],
+    technologies: ['HTML', 'Bootstrap', 'SCSS', 'jQuery'],
     links: [
       { label: 'Voir le site', href: 'https://davidanato.github.io/AnimeVerse/' },
       { label: 'GitHub', href: 'https://github.com/DavidAnato/AnimeVerse' },
@@ -407,7 +458,15 @@ export const projects: Project[] = [
     name: 'X SHOP',
     category: 'personal',
     status: 'En développement',
-    description: 'Plateforme e-commerce inspirée des grandes marketplaces.',
+    description:
+      'Plateforme e-commerce inspirée des grandes marketplaces : catalogue, panier et parcours d’achat côté frontend.',
+    highlights: [
+      'Catalogue marketplace',
+      'Parcours d’achat',
+      'Interface e-commerce',
+      'Frontend dédié',
+    ],
+    technologies: ['JavaScript', 'HTML', 'CSS'],
     links: [
       { label: 'GitHub', href: 'https://github.com/DavidAnato/x-shop-frontend' },
     ],
@@ -416,7 +475,13 @@ export const projects: Project[] = [
     name: 'Elek-Store',
     category: 'personal',
     description:
-      'API REST Django pour une boutique e-commerce : catalogue, commandes et endpoints métier.',
+      'API REST Django pour une boutique e-commerce : authentification, catalogue, panier, commandes et chatbot.',
+    highlights: [
+      'Authentification',
+      'Catalogue produits',
+      'Panier & commandes',
+      'Chatbot intégré',
+    ],
     technologies: ['Python', 'Django', 'Django REST Framework'],
     links: [{ label: 'GitHub', href: 'https://github.com/DavidAnato/elek-store-api' }],
   },
@@ -495,6 +560,9 @@ export const skills = [
     category: 'Data & IA',
     items: [
       'Machine Learning',
+      'Deep Learning',
+      'NLP',
+      'Computer Vision',
       'LLM',
       'APIs IA',
       'RAG',
@@ -506,7 +574,7 @@ export const skills = [
   },
   {
     category: 'Base de données',
-    items: ['PostgreSQL', 'SQL'],
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQL', 'Supabase', 'Firebase'],
   },
   {
     category: 'DevOps',
@@ -525,6 +593,21 @@ export const skills = [
   {
     category: 'Autres',
     items: ['Odoo', 'Postman', 'Figma', 'Progressive Web Apps', 'UI/UX', 'Tests & débogage'],
+  },
+  {
+    category: 'Compétences passives',
+    items: [
+      'Français',
+      'Anglais',
+      'Communication',
+      'Travail d’équipe',
+      'Autonomie',
+      'Résolution de problèmes',
+      'Adaptabilité',
+      'Rigueur',
+      'Gestion de projet',
+      'Esprit d’analyse',
+    ],
   },
 ] as const
 
