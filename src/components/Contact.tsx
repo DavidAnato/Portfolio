@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { profile } from '../data/content'
 import { SectionHeading } from './SectionHeading'
+import { PageNav } from './PageNav'
 import { useReveal } from '../hooks/useReveal'
 import {
   IconDownload,
@@ -37,7 +38,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="section-pad">
+    <section id="contact" className="section-pad pt-28 sm:pt-32">
       <div className="container-narrow">
         <SectionHeading
           eyebrow="Contact"
@@ -208,6 +209,8 @@ export function Contact() {
             ) : null}
           </form>
         </div>
+
+        <PageNav prev={{ to: '/formation', label: 'Formation' }} />
       </div>
     </section>
   )

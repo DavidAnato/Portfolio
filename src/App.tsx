@@ -1,33 +1,30 @@
-import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { About } from './components/About'
-import { Experience } from './components/Experience'
-import { Projects } from './components/Projects'
-import { Skills } from './components/Skills'
-import { Education } from './components/Education'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { HomePage } from './pages/HomePage'
+import { AboutPage } from './pages/AboutPage'
+import { ExperiencePage } from './pages/ExperiencePage'
+import { ProjectsPage } from './pages/ProjectsPage'
+import { ProjectDetailPage } from './pages/ProjectDetailPage'
+import { SkillsPage } from './pages/SkillsPage'
+import { EducationPage } from './pages/EducationPage'
+import { ContactPage } from './pages/ContactPage'
+import { NotFoundPage } from './pages/NotFoundPage'
 
 export default function App() {
   return (
-    <>
-      <a
-        href="#accueil"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-violet focus:px-4 focus:py-2 focus:text-white"
-      >
-        Aller au contenu
-      </a>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="a-propos" element={<AboutPage />} />
+        <Route path="experience" element={<ExperiencePage />} />
+        <Route path="projets" element={<ProjectsPage />} />
+        <Route path="projets/:slug" element={<ProjectDetailPage />} />
+        <Route path="competences" element={<SkillsPage />} />
+        <Route path="formation" element={<EducationPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="apropos" element={<Navigate to="/a-propos" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }

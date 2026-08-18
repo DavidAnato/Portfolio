@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { profile } from '../data/content'
 import { useReveal } from '../hooks/useReveal'
 import { IconDownload, IconFolder, IconMail } from './Icons'
@@ -38,13 +39,13 @@ export function Hero() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
-              <a
-                href="#projets"
+              <Link
+                to="/projets"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white hover:bg-violet-bright transition-colors shadow-lg shadow-violet/25"
               >
                 <IconFolder size={16} />
                 Voir mes projets
-              </a>
+              </Link>
               <a
                 href={profile.cv}
                 target="_blank"
@@ -54,13 +55,13 @@ export function Hero() {
                 <IconDownload size={16} />
                 Voir mon CV
               </a>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan/30 px-6 py-3 text-sm font-semibold text-cyan hover:bg-cyan/10 transition-colors"
               >
                 <IconMail size={16} />
                 Me contacter
-              </a>
+              </Link>
             </div>
 
           </div>

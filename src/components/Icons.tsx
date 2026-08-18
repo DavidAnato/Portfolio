@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import {
+  faArrowLeft,
+  faArrowRight,
   faArrowUp,
   faBriefcase,
   faCalendarDays,
@@ -133,6 +135,14 @@ export function IconGraduation({ size, className }: IconProps) {
 
 export function IconSend({ size, className }: IconProps) {
   return <Fa icon={faPaperPlane} size={size} className={className} />
+}
+
+export function IconArrowLeft({ size, className }: IconProps) {
+  return <Fa icon={faArrowLeft} size={size} className={className} />
+}
+
+export function IconArrowRight({ size, className }: IconProps) {
+  return <Fa icon={faArrowRight} size={size} className={className} />
 }
 
 export function IconArrowUp({ size, className }: IconProps) {

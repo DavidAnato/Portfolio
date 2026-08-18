@@ -55,6 +55,7 @@ export const experiences: ExperienceItem[] = [
     description:
       'Développement et maintenance de solutions web, avec intervention sur le frontend, le backend, les APIs et les fonctionnalités métier.',
     projects: ['OmneeFX', 'Azɔtɛn'],
+    technologies: ['Python', 'Django', 'Odoo', 'React Native', 'Next.js'],
     current: true,
     kind: 'job',
   },
@@ -65,6 +66,7 @@ export const experiences: ExperienceItem[] = [
     description:
       'Développement d’applications web et mobiles, intégration de fonctionnalités, tests fonctionnels, correction de bugs et amélioration des parcours utilisateurs.',
     projects: ['Prestige Distribution', 'SwimConnect', 'Timvio', 'Odoo Smart Search'],
+    technologies: ['React Native', 'Node.js', 'WordPress', 'FastAPI', 'React', 'Odoo'],
     kind: 'job',
   },
   {
@@ -625,11 +627,11 @@ export const education = [
 ] as const
 
 export const navLinks = [
-  { href: '#accueil', label: 'Accueil' },
-  { href: '#apropos', label: 'À propos' },
-  { href: '#experience', label: 'Expérience' },
-  { href: '#projets', label: 'Projets' },
-  { href: '#competences', label: 'Compétences' },
-  { href: '#formation', label: 'Formation' },
-  { href: '#contact', label: 'Contact' },
+  { to: '/', label: 'Accueil' },
+  { to: '/a-propos', label: 'À propos' },
+  { to: '/experience', label: 'Expérience' },
+  { to: '/projets', label: 'Projets' },
+  { to: '/competences', label: 'Compétences' },
+  { to: '/formation', label: 'Formation' },
+  { to: '/contact', label: 'Contact' },
 ] as const
