@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Project } from '../data/content'
 import { toSlug } from '../lib/slug'
-import { IconCheck, IconExternalLink, IconGithub } from './Icons'
+import { IconArrowRight, IconCheck, IconExternalLink, IconGithub } from './Icons'
 
 type Props = {
   project: Project
@@ -9,9 +9,61 @@ type Props = {
   compact?: boolean
 }
 
+function kindLabel(project: Project) {
+  if (project.odoo) return 'Odoo'
+  if (project.category === 'featured') return 'Phare'
+  if (project.category === 'professional') return 'Professionnel'
+  if (project.category === 'ai') return 'IA & Data'
+  if (project.badge === 'Projet de soutenance') return 'Soutenance'
+  return 'Personnel'
+}
+
 export function ProjectCard({ project, featured = false, compact = false }: Props) {
   const slug = toSlug(project.name)
-  const highlights = compact ? project.highlights?.slice(0, 4) : project.highlights
+
+  if (compact && !featured) {
+    return (
+      <article className="group h-full rounded-2xl border border-white/8 bg-panel/55 p-5 sm:p-6 transition-colors hover:border-violet/35">
+        <div className="flex flex-wrap items-center gap-2 mb-3">
+          <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] text-zinc-400">
+            {kindLabel(project)}
+          </span>
+          {project.status ? (
+            <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-2.5 py-0.5 text-[11px] text-amber-200">
+              {project.status}
+            </span>
+          ) : null}
+        </div>
+        <h3 className="font-display text-lg font-semibold text-white tracking-tight">
+          <Link to={`/projets/${slug}`} className="hover:text-violet-bright transition-colors">
+            {project.name}
+          </Link>
+        </h3>
+        <p className="mt-2 text-sm text-zinc-400 leading-relaxed line-clamp-3">{project.description}</p>
+        {project.technologies?.length ? (
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {project.technologies.slice(0, 4).map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-white/10 bg-ink/40 px-2.5 py-0.5 text-[11px] text-zinc-400"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        ) : null}
+        <Link
+          to={`/projets/${slug}`}
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-violet-bright hover:underline"
+        >
+          Voir la fiche
+          <IconArrowRight size={12} />
+        </Link>
+      </article>
+    )
+  }
+
+  const highlights = project.highlights
 
   return (
     <article
@@ -63,7 +115,7 @@ export function ProjectCard({ project, featured = false, compact = false }: Prop
 
       {project.technologies?.length ? (
         <div className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.slice(0, compact ? 5 : undefined).map((tech) => (
+          {project.technologies.map((tech) => (
             <span
               key={tech}
               className="rounded-full border border-white/10 bg-ink/40 px-3 py-1 text-xs text-zinc-300"
@@ -79,9 +131,9 @@ export function ProjectCard({ project, featured = false, compact = false }: Prop
           to={`/projets/${slug}`}
           className="inline-flex items-center gap-2 rounded-full bg-violet/20 border border-violet/30 px-4 py-2 text-sm font-medium text-violet-bright hover:bg-violet/30 transition-colors"
         >
-          Voir le détail
+          Voir la fiche
         </Link>
-        {project.links?.slice(0, compact ? 1 : 2).map((link) => {
+        {project.links?.slice(0, 2).map((link) => {
           const isGithub = /github\.com/i.test(link.href) || /github/i.test(link.label)
           return (
             <a

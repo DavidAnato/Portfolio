@@ -27,18 +27,48 @@ export function ProjectsPage() {
   usePageTitle('Projets')
   const [filter, setFilter] = useState<FilterId>('all')
 
-  const items = useMemo(() => {
-    if (filter === 'all') return projects
-    if (filter === 'odoo') return projects.filter((p) => p.odoo)
-    if (filter === 'professional') return projects.filter((p) => p.category === 'professional' && !p.odoo)
-    if (filter === 'personal') return projects.filter((p) => p.category === 'personal' || p.category === 'featured')
-    return projects.filter((p) => p.category === 'ai')
-  }, [filter])
+  const groups = useMemo(
+    () => [
+      {
+        id: 'featured' as const,
+        title: 'Projet phare',
+        description: 'Produit personnel web + mobile, traité comme un vrai produit — pas une démo.',
+        items: projects.filter((p) => p.category === 'featured'),
+        featured: true,
+      },
+      {
+        id: 'odoo' as const,
+        title: 'Odoo',
+        description: 'Missions et modules livrés avec Odoo, parmi d’autres réalisations — pas le positionnement principal.',
+        items: projects.filter((p) => p.odoo),
+      },
+      {
+        id: 'professional' as const,
+        title: 'Professionnels',
+        description: 'Web, mobile et APIs en contexte entreprise ou client.',
+        items: projects.filter((p) => p.category === 'professional' && !p.odoo),
+      },
+      {
+        id: 'personal' as const,
+        title: 'Perso & soutenance',
+        description: 'E-commerce, e-learning, santé numérique et sites — le détail est dans chaque fiche.',
+        items: projects.filter((p) => p.category === 'personal'),
+      },
+      {
+        id: 'ai' as const,
+        title: 'IA & Data',
+        description: 'TAL, voix, scraping et expérimentations — uniquement là où ça sert un usage concret.',
+        items: projects.filter((p) => p.category === 'ai'),
+      },
+    ],
+    [],
+  )
 
-  const cols =
-    filter === 'odoo' || filter === 'professional' || filter === 'ai'
-      ? 'md:grid-cols-2'
-      : 'md:grid-cols-2 lg:grid-cols-3'
+  const visible = groups.filter((group) => {
+    if (filter === 'all') return group.items.length > 0
+    if (filter === 'personal') return group.id === 'personal' || group.id === 'featured'
+    return group.id === filter
+  })
 
   return (
     <section className="section-pad pt-28 sm:pt-32">
@@ -46,10 +76,10 @@ export function ProjectsPage() {
         <SectionHeading
           eyebrow="Projets"
           title="Réalisations"
-          description="Chaque carte ouvre une page dédiée : contexte, rôle, livrables, stack et liens. Filtrez par type pour naviguer plus vite."
+          description="Fiches séparées pour ne pas tout mélanger : contexte, besoin, construction, livrables et liens. Les projets liés en bas de fiche partagent un vrai point commun (marketplace, Odoo, mobile métier, NLP…), pas seulement la même catégorie."
         />
 
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2 mb-12">
           {filters.map((item) => (
             <button
               key={item.id}
@@ -67,13 +97,35 @@ export function ProjectsPage() {
           ))}
         </div>
 
-        <p className="text-sm text-zinc-500 mb-6">
-          {items.length} projet{items.length > 1 ? 's' : ''} dans cette vue
-        </p>
-
-        <div className={`grid gap-4 sm:gap-5 ${cols}`}>
-          {items.map((project) => (
-            <ProjectCard key={project.name} project={project} compact featured={false} />
+        <div className="space-y-16">
+          {visible.map((group) => (
+            <section key={group.id}>
+              <div className="mb-6 max-w-2xl">
+                <h2 className="font-display text-2xl font-semibold text-white">{group.title}</h2>
+                {group.description ? (
+                  <p className="mt-2 text-sm text-muted leading-relaxed">{group.description}</p>
+                ) : null}
+              </div>
+              {group.featured ? (
+                <div className="grid gap-4">
+                  {group.items.map((project) => (
+                    <ProjectCard key={project.name} project={project} featured />
+                  ))}
+                </div>
+              ) : (
+                <div
+                  className={`grid gap-4 ${
+                    group.id === 'odoo' || group.id === 'professional' || group.id === 'ai'
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-2 lg:grid-cols-3'
+                  }`}
+                >
+                  {group.items.map((project) => (
+                    <ProjectCard key={project.name} project={project} compact />
+                  ))}
+                </div>
+              )}
+            </section>
           ))}
         </div>
 
