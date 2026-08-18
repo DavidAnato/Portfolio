@@ -29,7 +29,7 @@ export function Contact() {
     e.preventDefault()
     if (!canSubmit) return
 
-    const subject = encodeURIComponent(`Contact portfolio — ${name.trim()}`)
+    const subject = encodeURIComponent(`Contact portfolio - ${name.trim()}`)
     const body = encodeURIComponent(
       `Nom: ${name.trim()}\nEmail: ${email.trim()}\n\nMessage:\n${message.trim()}`,
     )
@@ -43,7 +43,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Un projet ? Parlons-en."
-          description="Je suis ouvert aux opportunités remote, collaborations et projets où je peux apporter mes compétences en développement Full-Stack et en intelligence artificielle."
+          description="Ouvert aux opportunités remote et aux collaborations."
         />
 
         <div ref={ref} className="reveal grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8">
@@ -200,7 +200,7 @@ export function Contact() {
                 Renseignez le nom, un email valide et un message (10 caractères min.) pour activer l’envoi.
               </p>
             ) : (
-              <p className="text-xs text-violet-bright">Formulaire prêt — vous pouvez envoyer.</p>
+              <p className="text-xs text-violet-bright">Formulaire prêt.</p>
             )}
             {status === 'ready' ? (
               <p className="text-sm text-zinc-400" role="status">

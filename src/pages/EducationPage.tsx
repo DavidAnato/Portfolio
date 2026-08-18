@@ -16,7 +16,7 @@ export function EducationPage() {
         <SectionHeading
           eyebrow="Formation"
           title="Parcours académique"
-          description="Le cursus qui structure mon approche : informatique de gestion, projets appliqués et intelligence artificielle."
+          description="Informatique de gestion, projets appliqués et intelligence artificielle."
         />
         <div ref={ref} className="reveal grid md:grid-cols-2 gap-4 md:gap-6">
           {education.map((item) => {

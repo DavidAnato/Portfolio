@@ -20,7 +20,7 @@ export function AboutPage() {
       <div className="container-narrow">
         <SectionHeading
           eyebrow="À propos"
-          title="Un profil Full-Stack orienté produit"
+          title="Développeur Full-Stack"
           description={about.lead}
         />
 

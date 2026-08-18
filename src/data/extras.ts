@@ -1,8 +1,8 @@
 export const aboutStory = [
-  'Je suis développeur Full-Stack, basé à Cotonou, formé en informatique de gestion et intelligence artificielle. Ce qui m’intéresse, c’est de livrer des produits complets : interfaces soignées, APIs solides, données cohérentes, et un déploiement qui tient en conditions réelles.',
-  'J’interviens aussi bien sur le web que sur le mobile. Python/Django, React, React Native, Vue.js et Node.js forment le cœur de ma stack. J’ai aussi travaillé sur des modules et intégrations Odoo dans le cadre de missions, sans que ce soit mon positionnement principal.',
-  'Côté IA, je m’appuie sur le Machine Learning, le NLP, le RAG et les LLM quand cela accélère vraiment un parcours métier — recherche sémantique, assistants, traitement de données — plutôt que comme une démonstration.',
-  'En mission, je prends le sujet de bout en bout : comprendre le besoin, proposer une architecture simple, implémenter, tester les parcours, puis itérer. J’aime les produits où le backend, l’interface et les données se parlent clairement.',
+  'Je suis développeur Full-Stack, basé à Cotonou, formé en informatique de gestion et intelligence artificielle. Je livre des produits complets : interfaces, APIs, données cohérentes, et déploiement.',
+  'J’interviens aussi bien sur le web que sur le mobile. Python/Django, React, React Native, Vue.js et Node.js forment le cœur de ma stack. J’ai aussi travaillé sur des modules et intégrations Odoo dans le cadre de missions.',
+  'Côté IA, je m’appuie sur le Machine Learning, le NLP, le RAG et les LLM pour de la recherche sémantique, des assistants et du traitement de données.',
+  'En mission, je prends le sujet de bout en bout : comprendre le besoin, proposer une architecture simple, implémenter, tester les parcours, puis itérer.',
 ]
 
 export const aboutFocus = [
@@ -16,7 +16,7 @@ export const aboutFocus = [
   },
   {
     title: 'Qualité & autonomie',
-    text: 'Code lisible, parcours utilisateurs clairs, tests et itérations. Je préfère un livrable utile à une démo technique.',
+    text: 'Code lisible, parcours utilisateurs clairs, tests et itérations.',
   },
 ]
 
@@ -31,7 +31,7 @@ export const aboutHowIWork = [
   },
   {
     title: 'Garder le code maintenable',
-    text: 'APIs explicites, modèles de données cohérents, interfaces lisibles — pour que le produit puisse évoluer.',
+    text: 'APIs explicites, modèles de données cohérents, interfaces lisibles.',
   },
 ]
 
@@ -41,7 +41,7 @@ export const experienceExtras: Record<
 > = {
   LaToure: {
     summary:
-      'Poste actuel : je construis et maintiens des produits web et mobile pour LaToure, en intervenant sur toute la chaîne — backend, interfaces, APIs et fonctionnalités métier.',
+      'Poste actuel : je construis et maintiens des produits web et mobile pour LaToure, en intervenant sur le backend, les interfaces, les APIs et les fonctionnalités métier.',
     contributions: [
       'Développement et maintenance d’OmneeFX, plateforme métier trading / finance avec parcours back-office et e-learning.',
       'Travail sur Azɔtɛn : marketplace de jobs, escrow, application mobile, API Django et back-office admin.',
@@ -102,7 +102,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Projet personnel phare, en développement.',
     role: 'Conception et développement full-stack : web, mobile, API, temps réel et studio IA.',
     longDescription:
-      'FOTOCE est conçu comme un réseau social visuel complet, pas comme une démo. L’objectif est de couvrir le cycle de vie d’un contenu (publication, découverte, interaction, notification) sur le web et le mobile, avec un backend API, du temps réel et un mode offline-first. Un studio IA vient enrichir la création sans remplacer le produit social.',
+      'FOTOCE est un réseau social visuel. L’objectif est de couvrir le cycle de vie d’un contenu (publication, découverte, interaction, notification) sur le web et le mobile, avec un backend API, du temps réel, un mode offline-first et un studio IA pour la création.',
     details: [
       'Feed, stories, profils, recherche et interactions sociales.',
       'Application mobile Expo / React Native alignée sur le web Vue.js.',
@@ -113,7 +113,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   OmneeFX: {
-    setting: 'Mission professionnelle — LaToure.',
+    setting: 'Mission professionnelle, LaToure.',
     role: 'Développement et maintenance de la plateforme Odoo et du site associé.',
     longDescription:
       'OmneeFX est une plateforme métier orientée trading / finance, développée et maintenue dans le cadre de LaToure. Le cœur applicatif s’appuie sur Odoo (modules, back-office, e-learning) avec un site public pour présenter l’offre.',
@@ -129,10 +129,10 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Mission réalisée dans le cadre de Zenpilote.',
     role: 'Conception du pipeline (scraping, embeddings, API) et de l’interface de recherche.',
     longDescription:
-      'Odoo Smart Search (OSS) est un moteur de recherche sémantique sur le catalogue apps.odoo.com. L’idée : trouver un module par intention (« facturation multi-sociétés ») plutôt que par mot-clé exact. Le pipeline combine scraping, embeddings, API FastAPI et un frontend React.',
+      'Odoo Smart Search (OSS) est un moteur de recherche sémantique sur le catalogue apps.odoo.com. On trouve un module par intention (« facturation multi-sociétés »). Le pipeline combine scraping, embeddings, API FastAPI et un frontend React.',
     details: [
       'Indexation vectorielle des fiches modules Odoo Apps.',
-      'Recherche par similarité (sentence-transformers) plutôt que match lexical.',
+      'Recherche par similarité (sentence-transformers).',
       'Filtres métier : version, prix, licence, éditeur.',
       'Traduction FR/EN pour élargir les requêtes.',
       'API FastAPI + SQLAlchemy et interface React / Vite / Tailwind.',
@@ -147,14 +147,14 @@ export const projectExtras: Record<string, ProjectExtra> = {
       'Boutique WordPress / WooCommerce et gestion du catalogue.',
       'Personnalisations via WP Code (parcours, affichages, règles).',
       'Intégration avec Odoo pour le flux métier (produits, commandes).',
-      'Interface responsive orientée conversion et lisibilité du catalogue.',
+      'Interface responsive, lisibilité du catalogue.',
     ],
   },
   'Odoo Module Rhys': {
-    setting: 'Add-on Odoo 13 — structure de module installable.',
+    setting: 'Add-on Odoo 13, module installable.',
     role: 'Développement du module (manifest, modèles, vues, ACL, snippet Website).',
     longDescription:
-      'Add-on Odoo 13 structuré comme un vrai module installable : manifest, modèles Python, vues XML, droits d’accès. Il sert d’assistant vocal / snippet Website Builder.',
+      'Add-on Odoo 13 : manifest, modèles Python, vues XML, droits d’accès. Assistant vocal et snippet Website Builder.',
     details: [
       'Manifest Odoo, dépendance `base`, module installable.',
       'Modèles Python et vues XML.',
@@ -166,7 +166,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Mission réalisée dans le cadre de Zenpilote.',
     role: 'Développement de la plateforme web et des parcours métiers.',
     longDescription:
-      'Plateforme web pour l’écosystème aquatique : mettre en relation maîtres-nageurs et structures (piscines), organiser les activités et clarifier les parcours utilisateurs.',
+      'Plateforme web pour l’écosystème aquatique : mettre en relation maîtres-nageurs et piscines, gérer les activités et les parcours utilisateurs.',
     details: [
       'Espaces distincts maîtres-nageurs et piscines.',
       'Gestion des activités et des structures.',
@@ -187,7 +187,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Azɔtɛn': {
-    setting: 'Mission professionnelle — LaToure.',
+    setting: 'Mission professionnelle, LaToure.',
     role: 'Marketplace jobs : app mobile, API Django, escrow et back-office.',
     longDescription:
       'Marketplace de missions avec escrow : publier un job, candidater, échanger, et sécuriser le paiement jusqu’à la livraison. L’écosystème comprend l’app mobile, l’API Django et un back-office admin.',
@@ -211,7 +211,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'DOTO+': {
-    setting: 'Projet de soutenance — écosystème santé numérique.',
+    setting: 'Projet de soutenance, écosystème santé numérique.',
     role: 'Produit complet : apps patient / professionnels, API médicale, QR et admin.',
     longDescription:
       'Écosystème santé numérique de soutenance : Doto+ (patient), DotoHub (professionnels), DotoCard (accès QR), admin et API médicale. Le produit gère dossiers, consultations, ordonnances, examens, consentement et un mode urgence hors ligne.',
@@ -225,7 +225,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   WISORIA: {
-    setting: 'Projet personnel — e-learning.',
+    setting: 'Projet personnel, e-learning.',
     role: 'Application mobile Expo : cours, quiz, certification et progression.',
     longDescription:
       'Plateforme e-learning : suivre des cours, avancer dans un parcours, passer des quiz et obtenir une certification. L’app mobile Expo est le client principal publié.',
@@ -237,7 +237,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'LAHA Academia': {
-    setting: 'Projet personnel — plateforme éducative.',
+    setting: 'Projet personnel, plateforme éducative.',
     role: 'Frontend pour catalogue de cours et d’ouvrages.',
     longDescription:
       'Plateforme éducative pour diffuser cours et ouvrages : catalogue pédagogique, lecture et organisation des contenus pour les apprenants.',
@@ -249,7 +249,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   AgriConnect: {
-    setting: 'Projet personnel — marketplace agricole.',
+    setting: 'Projet personnel, marketplace agricole.',
     role: 'Frontend React, API Python, rôles producteur / consommateur / admin.',
     longDescription:
       'Marketplace agricole qui relie producteurs et consommateurs. Catalogue, panier, commandes, et dashboards séparés (producteur, consommateur, admin), avec une API Python.',
@@ -264,7 +264,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Mini-app web personnelle.',
     role: 'Page statique pour générer et partager un contact WhatsApp.',
     longDescription:
-      'Mini-app web pour obtenir et partager un contact via WhatsApp, sans friction : page statique, lien direct, déploiement GitHub Pages.',
+      'Mini-app web pour obtenir et partager un contact via WhatsApp : page statique, lien direct, déploiement GitHub Pages.',
     details: [
       'Formulaire / génération de lien WhatsApp.',
       'Partage rapide d’un contact.',
@@ -273,7 +273,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Royal Computer': {
-    setting: 'Projet personnel — boutique Django.',
+    setting: 'Projet personnel, boutique Django.',
     role: 'E-commerce Django : catalogue, panier, comptes et blog.',
     longDescription:
       'Boutique Django d’ordinateurs et d’électronique : catalogue, panier, authentification et blog pour animer le contenu autour des produits.',
@@ -297,7 +297,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Bethel Sarl': {
-    setting: 'Site vitrine — entreprise d’impression.',
+    setting: 'Site vitrine, entreprise d’impression.',
     role: 'Pages HTML/CSS responsive pour présenter les services.',
     longDescription:
       'Site vitrine pour une entreprise d’impression : présenter les services, rassurer le visiteur et donner un point de contact, en HTML/CSS responsive.',
@@ -309,7 +309,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   AnimeVerse: {
-    setting: 'Projet personnel — catalogue d’animes.',
+    setting: 'Projet personnel, catalogue d’animes.',
     role: 'Front Bootstrap / SCSS / jQuery : recherche, filtres, fiches.',
     longDescription:
       'Catalogue d’exploration d’animes : rechercher, filtrer et ouvrir une fiche détaillée. Front Bootstrap / SCSS / jQuery.',
@@ -321,7 +321,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'X SHOP': {
-    setting: 'Projet personnel — en cours.',
+    setting: 'Projet personnel, en cours.',
     role: 'Frontend e-commerce type marketplace (catalogue, panier).',
     longDescription:
       'Frontend e-commerce inspiré des grandes marketplaces (catalogue, panier, parcours d’achat). Projet encore en développement.',
@@ -333,7 +333,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Elek-Store': {
-    setting: 'Projet personnel — API boutique.',
+    setting: 'Projet personnel, API boutique.',
     role: 'API REST Django : auth, catalogue, panier, commandes, chatbot.',
     longDescription:
       'API REST Django d’une boutique : auth, produits, panier, commandes, plus un chatbot branché sur le métier e-commerce.',
@@ -345,7 +345,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Traduction Français → Fong': {
-    setting: 'Projet IA / TAL — données et expérimentation.',
+    setting: 'Projet IA / TAL, données et expérimentation.',
     role: 'Préparation de corpus FR/Fon et expérimentation de modèle de traduction.',
     longDescription:
       'Projet de traduction automatique FR → Fon, appuyé sur des données linguistiques spécifiques et des techniques de Machine Learning (jeu de données et expérimentation de modèle).',
@@ -357,7 +357,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     ],
   },
   'Collecte de données linguistiques en Fongbe': {
-    setting: 'Projet IA / TAL — constitution de corpus.',
+    setting: 'Projet IA / TAL, constitution de corpus.',
     role: 'Collecte, nettoyage et formatage de données en fongbe.',
     longDescription:
       'Collecte et nettoyage de corpus en fongbe pour alimenter des modèles de TAL : alignement, nettoyage, formatage.',
@@ -384,7 +384,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Expérimentation voix (STT / TTS).',
     role: 'Reconnaissance de commandes vocales et réponse parlée.',
     longDescription:
-      'Assistant capable d’écouter une commande vocale, de l’interpréter et de répondre — reconnaissance et synthèse vocales.',
+      'Assistant capable d’écouter une commande vocale, de l’interpréter et de répondre (reconnaissance et synthèse vocales).',
     details: [
       'Capture audio et reconnaissance vocale.',
       'Interprétation de commandes.',
@@ -396,7 +396,7 @@ export const projectExtras: Record<string, ProjectExtra> = {
     setting: 'Laboratoire Python (vision, audio, QR).',
     role: 'Boîte à outils : OCR, parole, images, QR.',
     longDescription:
-      'Boîte à outils Python : OCR, parole, images, QR. Un laboratoire pratique de vision et de traitement du signal plutôt qu’un produit unique.',
+      'Boîte à outils Python : OCR, parole, images, QR.',
     details: [
       'OCR (extraction de texte depuis une image).',
       'Reconnaissance et synthèse vocales.',
@@ -419,23 +419,23 @@ export const projectExtras: Record<string, ProjectExtra> = {
 }
 
 export const skillNotes: Record<string, string> = {
-  Langages: 'Bases avec lesquelles je construis le reste de la stack, du script à l’application.',
-  Frontend: 'Interfaces web modernes, design systems légers et apps React / Vue / Next.',
-  Mobile: 'Applications iOS/Android via React Native, et expérimentations Flutter / Python.',
-  Desktop: 'Outils internes et prototypes desktop (Qt, Electron, Tauri, etc.).',
-  Backend: 'APIs REST, temps réel, auth et métier — surtout Django et Node.',
-  'Data & IA': 'Du classique ML/DL au RAG et aux agents, uniquement quand ça sert le produit.',
-  'Base de données': 'Relationnel, document et BaaS selon le projet (Postgres, MySQL, Mongo, Firebase, Supabase).',
-  DevOps: 'Git, conteneurs, reverse proxy et déploiements (Vercel, Render, Cloudflare, VPS).',
-  Autres: 'ERP Odoo en mission, design, PWA, tests et outillage API.',
-  'Compétences passives': 'Ce que j’apporte autour du code : langues, collab, rigueur, autonomie.',
+  Langages: 'Python, JavaScript, TypeScript, HTML, CSS, SQL.',
+  Frontend: 'React, Vue.js, Next.js, Tailwind CSS, Bootstrap.',
+  Mobile: 'React Native, Flutter, Flet, Kivy.',
+  Desktop: 'Qt, Electron, Tauri et outils Python.',
+  Backend: 'APIs REST, temps réel, auth. Django et Node.',
+  'Data & IA': 'Machine Learning, Deep Learning, RAG et agents.',
+  'Base de données': 'PostgreSQL, MySQL, MongoDB, Supabase, Firebase.',
+  DevOps: 'Git, Docker, Linux, Nginx, Vercel, Render, Cloudflare.',
+  Autres: 'Odoo, Figma, PWA, tests et outillage API.',
+  'Compétences passives': 'Français, anglais, collaboration, autonomie, rigueur.',
 }
 
 export const educationExtras: Record<
   string,
   { description: string; topics: string[] }
 > = {
-  'Licence en Informatique de Gestion — Intelligence Artificielle': {
+  'Licence en Informatique de Gestion, Intelligence Artificielle': {
     description:
       'Formation orientée systèmes d’information, développement et IA : de la gestion des données aux bases du machine learning, avec des projets appliqués (dont DOTO+ en soutenance).',
     topics: [

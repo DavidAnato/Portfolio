@@ -22,7 +22,7 @@ export function HomePage() {
           <div className="grid sm:grid-cols-3 gap-3 mb-8">
             <div className="rounded-2xl border border-white/8 bg-panel/40 px-5 py-4">
               <p className="text-2xl font-display font-semibold text-white">{projects.length}</p>
-              <p className="text-sm text-muted mt-1">Projets détaillés</p>
+              <p className="text-sm text-muted mt-1">Projets</p>
             </div>
             <div className="rounded-2xl border border-white/8 bg-panel/40 px-5 py-4">
               <p className="text-2xl font-display font-semibold text-white">Depuis 2023</p>
@@ -42,7 +42,7 @@ export function HomePage() {
               <p className="text-xs uppercase tracking-[0.18em] text-violet-bright mb-2">Profil</p>
               <h2 className="font-display text-xl font-semibold text-white">Full-Stack & IA</h2>
               <p className="mt-2 text-sm text-muted leading-relaxed">
-                Web, mobile, APIs et produits de bout en bout. Lire le détail du parcours.
+                Web, mobile, APIs et produits de bout en bout.
               </p>
             </Link>
             <Link
@@ -55,7 +55,7 @@ export function HomePage() {
                 {currentJob?.company ?? 'Missions'}
               </h2>
               <p className="mt-2 text-sm text-muted leading-relaxed">
-                {currentJob?.role} — {currentJob?.period}
+                {currentJob?.role} · {currentJob?.period}
               </p>
             </Link>
             <Link
@@ -100,7 +100,7 @@ export function HomePage() {
               <p className="text-sm font-medium tracking-[0.18em] uppercase text-violet-bright/90 mb-2">
                 Autres réalisations
               </p>
-              <h2 className="font-display text-2xl font-semibold text-white">Un aperçu, le détail est sur chaque page</h2>
+              <h2 className="font-display text-2xl font-semibold text-white">Sélection</h2>
             </div>
             <Link to="/projets" className="text-sm text-violet-bright hover:underline">
               Voir tout

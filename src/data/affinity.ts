@@ -137,7 +137,7 @@ export const projectAffinity: Record<string, ProjectAffinity> = {
 
 export const projectDeepDive: Record<string, { need: string; build: string }> = {
   FOTOCE: {
-    need: 'Couvrir un vrai cycle social visuel (publier, découvrir, interagir, notifier) sur web et mobile, pas seulement un feed de démonstration.',
+    need: 'Couvrir le cycle social visuel (publier, découvrir, interagir, notifier) sur web et mobile.',
     build: 'Front web Vue.js, app Expo / React Native, API Django REST, PostgreSQL, WebSockets, cache offline et un studio IA branché sur la création.',
   },
   OmneeFX: {
@@ -145,7 +145,7 @@ export const projectDeepDive: Record<string, { need: string; build: string }> = 
     build: 'Cœur Odoo (modules Python / XML / JS), e-learning, maintenance évolutive, plus un site public pour présenter l’offre.',
   },
   'Odoo Smart Search': {
-    need: 'Trouver un module Odoo Apps par intention (« facturation multi-sociétés ») plutôt que par mot-clé exact.',
+    need: 'Trouver un module Odoo Apps par intention (« facturation multi-sociétés »).',
     build: 'Scraping du catalogue, embeddings (sentence-transformers), API FastAPI / SQLAlchemy, UI React, filtres métier et traduction FR/EN.',
   },
   'Prestige Distribution': {
@@ -153,7 +153,7 @@ export const projectDeepDive: Record<string, { need: string; build: string }> = 
     build: 'WooCommerce / WordPress, personnalisations WP Code, liaison métier Odoo, parcours catalogue responsive.',
   },
   'Odoo Module Rhys': {
-    need: 'Un add-on installable, pas un patch isolé : assistant vocal et snippet Website Builder.',
+    need: 'Add-on Odoo installable : assistant vocal et snippet Website Builder.',
     build: 'Module Odoo 13 (manifest, modèles Python, vues XML, ACL) branché sur le Website Builder.',
   },
   SwimConnect: {
@@ -169,7 +169,7 @@ export const projectDeepDive: Record<string, { need: string; build: string }> = 
     build: 'App Expo / React Native, API Django REST, escrow, messagerie, back-office Next.js.',
   },
   'FAMES Bénin': {
-    need: 'Un site média pour publier et lire des articles, administrable sans toucher au code.',
+    need: 'Un site média pour publier et lire des articles.',
     build: 'Frontend React / Tailwind, API Django REST, panel d’administration des contenus.',
   },
   'DOTO+': {
@@ -189,11 +189,11 @@ export const projectDeepDive: Record<string, { need: string; build: string }> = 
     build: 'React / Vite / Tailwind, API Python, espaces producteur / consommateur / admin, panier et commandes.',
   },
   'Connect Me': {
-    need: 'Partager un contact WhatsApp sans application ni friction.',
+    need: 'Partager un contact WhatsApp.',
     build: 'Page HTML/CSS/JS, génération de lien, hébergement GitHub Pages.',
   },
   'Royal Computer': {
-    need: 'Vendre du matériel informatique en ligne, avec comptes et un peu de contenu autour des produits.',
+    need: 'Vendre du matériel informatique en ligne, avec comptes et blog.',
     build: 'Boutique Django : catalogue, panier, authentification, blog.',
   },
   EwaTiwa: {
@@ -230,10 +230,10 @@ export const projectDeepDive: Record<string, { need: string; build: string }> = 
   },
   'Assistant vocal': {
     need: 'Commander à la voix et obtenir une réponse parlée.',
-    build: 'Reconnaissance (STT), interprétation, synthèse (TTS) — aussi expérimenté dans le module Rhys.',
+    build: 'Reconnaissance (STT), interprétation, synthèse (TTS). Aussi utilisé dans le module Rhys.',
   },
   'Application multifonctionnelle': {
-    need: 'Un laboratoire pratique (OCR, voix, image, QR) plutôt qu’un produit unique.',
+    need: 'Outils Python : OCR, voix, image, QR.',
     build: 'Outils Python : extraction de texte, STT/TTS, traitement d’images, QR.',
   },
   'Web Scraping': {

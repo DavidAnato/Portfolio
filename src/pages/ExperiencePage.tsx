@@ -18,7 +18,7 @@ export function ExperiencePage() {
         <SectionHeading
           eyebrow="Expérience"
           title="Parcours professionnel"
-          description="Missions concrètes en web, mobile et APIs — avec le détail de ce qui a été livré à chaque étape."
+          description="Web, mobile et APIs, en entreprise et chez des clients."
         />
 
         <div ref={ref} className="reveal relative space-y-6">

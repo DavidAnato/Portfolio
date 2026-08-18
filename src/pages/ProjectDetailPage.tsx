@@ -87,7 +87,7 @@ export function ProjectDetailPage() {
 
             {extra?.role ? (
               <p className="mt-6 text-sm text-zinc-400 leading-relaxed">
-                <span className="text-zinc-500">Mon rôle — </span>
+                <span className="text-zinc-500">Mon rôle : </span>
                 {extra.role}
               </p>
             ) : null}
@@ -179,11 +179,7 @@ export function ProjectDetailPage() {
 
         {related.length ? (
           <div className="mt-16 pt-10 border-t border-white/8">
-            <h2 className="font-display text-xl font-semibold text-white mb-2">Projets compatibles</h2>
-            <p className="text-sm text-zinc-500 mb-6 max-w-2xl">
-              Uniquement des projets qui partagent un vrai socle (même type de produit, même stack métier). Pas un
-              mélange « même catégorie ».
-            </p>
+            <h2 className="font-display text-xl font-semibold text-white mb-6">Projets compatibles</h2>
             <ul className="grid sm:grid-cols-3 gap-4">
               {related.map(({ project: item, reasons }) => (
                 <li key={item.name}>
@@ -204,9 +200,7 @@ export function ProjectDetailPage() {
                           </span>
                         ))}
                       </div>
-                    ) : (
-                      <p className="mt-3 text-[11px] text-zinc-500">Lien direct (même écosystème)</p>
-                    )}
+                    ) : null}
                   </Link>
                 </li>
               ))}

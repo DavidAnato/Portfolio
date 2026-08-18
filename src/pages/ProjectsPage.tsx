@@ -32,14 +32,14 @@ export function ProjectsPage() {
       {
         id: 'featured' as const,
         title: 'Projet phare',
-        description: 'Produit personnel web + mobile, traité comme un vrai produit — pas une démo.',
+        description: 'Réseau social visuel, web et mobile.',
         items: projects.filter((p) => p.category === 'featured'),
         featured: true,
       },
       {
         id: 'odoo' as const,
         title: 'Odoo',
-        description: 'Missions et modules livrés avec Odoo, parmi d’autres réalisations — pas le positionnement principal.',
+        description: 'Modules et intégrations Odoo.',
         items: projects.filter((p) => p.odoo),
       },
       {
@@ -51,13 +51,13 @@ export function ProjectsPage() {
       {
         id: 'personal' as const,
         title: 'Perso & soutenance',
-        description: 'E-commerce, e-learning, santé numérique et sites — le détail est dans chaque fiche.',
+        description: 'E-commerce, e-learning, santé numérique et sites.',
         items: projects.filter((p) => p.category === 'personal'),
       },
       {
         id: 'ai' as const,
         title: 'IA & Data',
-        description: 'TAL, voix, scraping et expérimentations — uniquement là où ça sert un usage concret.',
+        description: 'TAL, voix, scraping et expérimentations.',
         items: projects.filter((p) => p.category === 'ai'),
       },
     ],
@@ -76,7 +76,7 @@ export function ProjectsPage() {
         <SectionHeading
           eyebrow="Projets"
           title="Réalisations"
-          description="Fiches séparées pour ne pas tout mélanger : contexte, besoin, construction, livrables et liens. Les projets liés en bas de fiche partagent un vrai point commun (marketplace, Odoo, mobile métier, NLP…), pas seulement la même catégorie."
+          description="Applications web, mobiles et APIs, missions professionnelles et projets personnels."
         />
 
         <div className="flex flex-wrap gap-2 mb-12">

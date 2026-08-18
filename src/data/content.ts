@@ -19,7 +19,7 @@ export const profile = {
 
 export const about = {
   lead:
-    'Je conçois et développe des applications de bout en bout — de l’architecture aux interfaces, des APIs au déploiement — avec une attention particulière à la qualité du code et à l’expérience utilisateur.',
+    'Je conçois et développe des applications de bout en bout : architecture, interfaces, APIs et déploiement, avec une attention à la qualité du code et à l’expérience utilisateur.',
   points: [
     {
       title: 'Chaîne complète',
@@ -27,11 +27,11 @@ export const about = {
     },
     {
       title: 'Produit & résolution',
-      text: 'Autonomie, apprentissage continu et focus sur la création de produits utiles plutôt que sur des démonstrations techniques.',
+      text: 'Autonomie, apprentissage continu, et création de produits utiles.',
     },
     {
       title: 'Qualité',
-      text: 'Code maintenable, parcours utilisateurs soignés, et intégration progressive de l’IA là où elle apporte une vraie valeur.',
+      text: 'Code maintenable, parcours utilisateurs soignés, et intégration de l’IA dans les parcours métier.',
     },
   ],
 } as const
@@ -51,7 +51,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'LaToure',
     role: 'Développeur Full-Stack',
-    period: 'Août 2024 — Présent',
+    period: 'Août 2024 - Présent',
     description:
       'Développement et maintenance de solutions web, avec intervention sur le frontend, le backend, les APIs et les fonctionnalités métier.',
     projects: ['OmneeFX', 'Azɔtɛn'],
@@ -62,7 +62,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Zenpilote',
     role: 'Développeur d’applications',
-    period: 'Mars 2025 — Juin 2026',
+    period: 'Mars 2025 - Juin 2026',
     description:
       'Développement d’applications web et mobiles, intégration de fonctionnalités, tests fonctionnels, correction de bugs et amélioration des parcours utilisateurs.',
     projects: ['Prestige Distribution', 'SwimConnect', 'Timvio', 'Odoo Smart Search'],
@@ -72,7 +72,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'FAMES Bénin',
     role: 'Projet Full-Stack',
-    period: 'Août — Octobre 2024',
+    period: 'Août - Octobre 2024',
     description:
       'Conception et développement d’un site web de blog et média pour FAMES Bénin, avec frontend, backend, gestion des contenus et APIs.',
     technologies: ['React', 'Django', 'REST API'],
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     category: 'professional',
     odoo: true,
     badge: 'Odoo',
-    context: 'Projet professionnel — LaToure',
+    context: 'Projet professionnel, LaToure',
     description:
       'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme.',
     highlights: [
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     badge: 'Odoo',
     context: 'Projet réalisé dans le cadre de Zenpilote',
     description:
-      'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention plutôt que par mot-clé, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
+      'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
     highlights: [
       'Recherche sémantique / vectorielle',
       'Scraping & indexation apps.odoo.com',
@@ -257,7 +257,7 @@ export const projects: Project[] = [
   {
     name: 'Azɔtɛn',
     category: 'professional',
-    context: 'Projet professionnel — LaToure',
+    context: 'Projet professionnel, LaToure',
     description:
       'Marketplace de jobs avec système d’escrow, application mobile, API et back-office admin. Plateforme complète pour publier, candidater et sécuriser les transactions liées aux missions.',
     highlights: [
@@ -271,9 +271,9 @@ export const projects: Project[] = [
     technologies: ['Django', 'Django REST Framework', 'React Native', 'Expo', 'Next.js'],
     links: [
       { label: 'Visiter Azɔtɛn', href: 'https://azoten.surge.sh/' },
-      { label: 'GitHub — App', href: 'https://github.com/DavidAnato/AZOTIN' },
-      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/azotin-backend' },
-      { label: 'GitHub — Admin', href: 'https://github.com/DavidAnato/azotin-backoffice' },
+      { label: 'GitHub App', href: 'https://github.com/DavidAnato/AZOTIN' },
+      { label: 'GitHub API', href: 'https://github.com/DavidAnato/azotin-backend' },
+      { label: 'GitHub Admin', href: 'https://github.com/DavidAnato/azotin-backoffice' },
     ],
   },
   {
@@ -290,7 +290,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React', 'Django', 'Django REST Framework', 'REST API', 'Tailwind CSS'],
     links: [
-      { label: 'GitHub — Frontend', href: 'https://github.com/DavidAnato/fames-benin-frontend' },
+      { label: 'GitHub Frontend', href: 'https://github.com/DavidAnato/fames-benin-frontend' },
     ],
   },
   {
@@ -301,8 +301,8 @@ export const projects: Project[] = [
       'Écosystème santé numérique conçu comme produit complet : application patient (Doto+), hub professionnels (DotoHub), carte d’accès QR (DotoCard), back-office admin et API médicale. Gestion des dossiers, consultations, ordonnances, examens, consentement et mode urgence hors ligne.',
     highlights: [
       'App patient Doto+ (Expo)',
-      'DotoHub — interface professionnels',
-      'DotoCard — QR chiffré',
+      'DotoHub, interface professionnels',
+      'DotoCard, QR chiffré',
       'API Django médicale',
       'RBAC multi-rôles',
       'Mode urgence offline',
@@ -318,11 +318,11 @@ export const projects: Project[] = [
       'TypeScript',
     ],
     links: [
-      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/doto-backend' },
-      { label: 'GitHub — App patient', href: 'https://github.com/DavidAnato/dotoplus' },
-      { label: 'GitHub — Hub', href: 'https://github.com/DavidAnato/dotohub' },
-      { label: 'GitHub — Hub mobile', href: 'https://github.com/DavidAnato/dotohub-mobile' },
-      { label: 'GitHub — Admin', href: 'https://github.com/DavidAnato/dotoplus-admin' },
+      { label: 'GitHub API', href: 'https://github.com/DavidAnato/doto-backend' },
+      { label: 'GitHub App patient', href: 'https://github.com/DavidAnato/dotoplus' },
+      { label: 'GitHub Hub', href: 'https://github.com/DavidAnato/dotohub' },
+      { label: 'GitHub Hub mobile', href: 'https://github.com/DavidAnato/dotohub-mobile' },
+      { label: 'GitHub Admin', href: 'https://github.com/DavidAnato/dotoplus-admin' },
     ],
   },
   {
@@ -338,7 +338,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React Native', 'TypeScript', 'Expo'],
     links: [
-      { label: 'GitHub — Mobile', href: 'https://github.com/DavidAnato/wisoria-mobile' },
+      { label: 'GitHub Mobile', href: 'https://github.com/DavidAnato/wisoria-mobile' },
     ],
   },
   {
@@ -371,8 +371,8 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Python'],
     links: [
       { label: 'Voir le site', href: 'https://agriconnect-mu-one.vercel.app' },
-      { label: 'GitHub — Frontend', href: 'https://github.com/DavidAnato/AgriConnect' },
-      { label: 'GitHub — API', href: 'https://github.com/DavidAnato/AgriConnectBackend' },
+      { label: 'GitHub Frontend', href: 'https://github.com/DavidAnato/AgriConnect' },
+      { label: 'GitHub API', href: 'https://github.com/DavidAnato/AgriConnectBackend' },
     ],
   },
   {
@@ -615,9 +615,9 @@ export const skills = [
 
 export const education = [
   {
-    title: 'Licence en Informatique de Gestion — Intelligence Artificielle',
+    title: 'Licence en Informatique de Gestion, Intelligence Artificielle',
     school: 'Institut Cerco',
-    period: '2022 — 2025',
+    period: '2022 - 2025',
   },
   {
     title: 'Baccalauréat Série D',

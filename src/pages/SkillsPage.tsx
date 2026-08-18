@@ -42,7 +42,7 @@ export function SkillsPage() {
         <SectionHeading
           eyebrow="Compétences"
           title="Stack technique"
-          description="Frontend, backend, mobile, data et outillage pour concevoir et livrer des produits — plus les compétences passives autour du code. Chaque groupe précise comment je m’en sers."
+          description="Frontend, backend, mobile, data, outillage et compétences autour du code."
         />
 
         <div ref={ref} className="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
