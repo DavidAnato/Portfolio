@@ -54,21 +54,14 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 
       {project.technologies?.length ? (
         <div className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => {
-              const isOdoo = /odoo/i.test(tech)
-              return (
-                <span
-                  key={tech}
-                  className={
-                    isOdoo
-                      ? 'rounded-full border border-violet/35 bg-violet/15 px-3 py-1 text-xs font-medium text-violet-bright'
-                      : 'rounded-full border border-white/10 bg-ink/40 px-3 py-1 text-xs text-zinc-300'
-                  }
-                >
-                  {tech}
-                </span>
-              )
-            })}
+          {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-white/10 bg-ink/40 px-3 py-1 text-xs text-zinc-300"
+              >
+                {tech}
+              </span>
+            ))}
         </div>
       ) : null}
 
@@ -108,7 +101,8 @@ function ProjectGrid({ items, columns = 'md:grid-cols-2 lg:grid-cols-3' }: { ite
 
 export function Projects() {
   const featured = projects.find((p) => p.category === 'featured')
-  const professional = projects.filter((p) => p.category === 'professional')
+  const odoo = projects.filter((p) => p.odoo)
+  const professional = projects.filter((p) => p.category === 'professional' && !p.odoo)
   const soutenance = projects.find((p) => p.badge === 'Projet de soutenance')
   const personal = projects.filter(
     (p) => p.category === 'personal' && p.badge !== 'Projet de soutenance',
@@ -124,7 +118,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Projets"
             title="Sélection de réalisations"
-            description="Du produit principal aux missions Odoo et professionnelles, en passant par les expérimentations personnelles et l’IA."
+            description="Du produit principal aux missions professionnelles, en passant par les expérimentations personnelles et l’IA."
           />
 
           {featured ? (
@@ -134,10 +128,20 @@ export function Projects() {
           ) : null}
         </div>
 
+        {odoo.length ? (
+          <div>
+            <h3 className="font-display text-2xl font-semibold text-white mb-2">Projets Odoo</h3>
+            <p className="text-muted mb-8 max-w-2xl">
+              Quelques missions et modules réalisés avec Odoo, parmi d’autres livraisons.
+            </p>
+            <ProjectGrid items={odoo} />
+          </div>
+        ) : null}
+
         <div>
           <h3 className="font-display text-2xl font-semibold text-white mb-2">Projets professionnels</h3>
           <p className="text-muted mb-8 max-w-2xl">
-            Missions et livraisons en contexte entreprise — Odoo, web, mobile et APIs.
+            Missions et livraisons réalisées en contexte entreprise ou client.
           </p>
           <ProjectGrid items={professional} />
         </div>

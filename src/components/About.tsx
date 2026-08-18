@@ -1,9 +1,9 @@
 import { about } from '../data/content'
 import { SectionHeading } from './SectionHeading'
 import { useReveal } from '../hooks/useReveal'
-import { IconCheckCircle, IconCubes, IconLayers } from './Icons'
+import { IconCheckCircle, IconLayers, IconSparkles } from './Icons'
 
-const aboutIcons = [IconCubes, IconLayers, IconCheckCircle]
+const aboutIcons = [IconLayers, IconSparkles, IconCheckCircle]
 
 export function About() {
   const ref = useReveal<HTMLDivElement>()
@@ -13,7 +13,7 @@ export function About() {
       <div className="container-narrow">
         <SectionHeading
           eyebrow="À propos"
-          title="Full-Stack, Odoo et produit"
+          title="Un profil Full-Stack orienté produit"
           description={about.lead}
         />
         <div ref={ref} className="reveal grid md:grid-cols-3 gap-4 md:gap-6">

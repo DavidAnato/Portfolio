@@ -1,11 +1,11 @@
 export const profile = {
   name: 'David Anato',
-  title: 'Développeur Full-Stack · Odoo & IA',
-  tags: ['Odoo', 'Web', 'Mobile', 'Backend', 'APIs', 'IA'],
+  title: 'Développeur Full-Stack & IA',
+  tags: ['Web', 'Mobile', 'Backend', 'APIs', 'Real-Time', 'AI'],
   availability: 'Disponible pour des opportunités remote',
   heroText:
-    'Développeur Full-Stack et Odoo : je conçois des applications web et mobiles, et je développe des modules Odoo métier — modèles Python, vues XML/QWeb, personnalisations ERP et intégrations (e-commerce, APIs). Stack principale : Python/Django, Odoo, React, React Native, Vue.js et Node.js, de l’architecture au déploiement. J’intègre aussi l’IA (LLM, RAG, recherche sémantique) là où elle accélère vraiment le métier.',
-  stackLine: ['Odoo', 'Python', 'Django', 'React', 'React Native', 'Vue.js', 'Node.js', 'IA'],
+    'Développeur Full-Stack spécialisé dans la conception et le développement d’applications web et mobiles, avec une expérience en frontend, backend, APIs REST et systèmes temps réel. Je travaille principalement avec Python/Django, React, React Native, Vue.js et Node.js, de l’architecture au déploiement. Je m’intéresse également à l’intégration de l’IA, notamment le Machine Learning, les LLM, le RAG et les agents IA.',
+  stackLine: ['Python', 'Django', 'React', 'React Native', 'Vue.js', 'Node.js', 'IA'],
   email: 'david1anato@gmail.com',
   phone: '+229 01 56 54 38 80',
   phoneHref: 'tel:+2290156543880',
@@ -18,55 +18,20 @@ export const profile = {
 
 export const about = {
   lead:
-    'Je conçois et développe des applications de bout en bout — de l’architecture aux interfaces, des APIs au déploiement — avec une expertise particulière sur Odoo (modules custom, ERP, intégrations) et une attention constante à la qualité du code.',
+    'Je conçois et développe des applications de bout en bout — de l’architecture aux interfaces, des APIs au déploiement — avec une attention particulière à la qualité du code et à l’expérience utilisateur.',
   points: [
-    {
-      title: 'Odoo & ERP',
-      text: 'Modules custom, personnalisation métier (achats, facturation, e-learning), vues XML/QWeb, ORM Python et connexions e-commerce / APIs.',
-    },
     {
       title: 'Chaîne complète',
       text: 'Conception, architecture, frontend, backend, APIs, bases de données, temps réel, mobile et déploiement.',
     },
     {
-      title: 'Produit & qualité',
-      text: 'Autonomie, code maintenable, parcours utilisateurs soignés, et IA uniquement là où elle apporte une vraie valeur métier.',
-    },
-  ],
-} as const
-
-export const odooExpertise = {
-  lead:
-    'Je développe et personnalise Odoo comme un vrai produit métier : modules, parcours utilisateurs, back-office et ponts avec le reste de la stack (web, e-commerce, IA).',
-  capabilities: [
-    {
-      title: 'Modules custom',
-      text: 'Modèles Python, sécurité, vues XML, QWeb et logique métier adaptée au processus client.',
+      title: 'Produit & résolution',
+      text: 'Autonomie, apprentissage continu et focus sur la création de produits utiles plutôt que sur des démonstrations techniques.',
     },
     {
-      title: 'Personnalisation ERP',
-      text: 'Achats, factures, e-learning, trading/finance — adapter Odoo au métier plutôt que l’inverse.',
+      title: 'Qualité',
+      text: 'Code maintenable, parcours utilisateurs soignés, et intégration progressive de l’IA là où elle apporte une vraie valeur.',
     },
-    {
-      title: 'Intégrations',
-      text: 'WooCommerce, APIs REST, sites vitrine et flux de données entre Odoo et les applications existantes.',
-    },
-    {
-      title: 'Odoo + IA',
-      text: 'Recherche sémantique sur l’écosystème apps.odoo.com, indexation vectorielle et filtres métier.',
-    },
-  ],
-  stack: [
-    'Odoo',
-    'Python ORM',
-    'XML / QWeb',
-    'JavaScript / OWL',
-    'PostgreSQL',
-    'Website Builder',
-    'e-Learning',
-    'Achats & facturation',
-    'WooCommerce',
-    'REST APIs',
   ],
 } as const
 
@@ -87,9 +52,8 @@ export const experiences: ExperienceItem[] = [
     role: 'Développeur Full-Stack',
     period: 'Août 2024 — Présent',
     description:
-      'Développement et maintenance de solutions web et Odoo : modules métier, e-learning, back-office, frontend, backend et APIs — notamment la plateforme OmneeFX (trading / finance).',
+      'Développement et maintenance de solutions web, avec intervention sur le frontend, le backend, les APIs et les fonctionnalités métier.',
     projects: ['OmneeFX', 'Azɔtɛn'],
-    technologies: ['Odoo', 'Python', 'XML', 'JavaScript', 'Django', 'React Native'],
     current: true,
     kind: 'job',
   },
@@ -98,9 +62,8 @@ export const experiences: ExperienceItem[] = [
     role: 'Développeur d’applications',
     period: 'Mars 2025 — Juin 2026',
     description:
-      'Développement d’applications web et mobiles, intégrations Odoo (e-commerce WooCommerce, recherche sémantique apps.odoo.com), tests fonctionnels et amélioration des parcours utilisateurs.',
+      'Développement d’applications web et mobiles, intégration de fonctionnalités, tests fonctionnels, correction de bugs et amélioration des parcours utilisateurs.',
     projects: ['Prestige Distribution', 'SwimConnect', 'Timvio', 'Odoo Smart Search'],
-    technologies: ['Odoo', 'WordPress', 'WooCommerce', 'Python', 'FastAPI', 'React Native'],
     kind: 'job',
   },
   {
@@ -183,17 +146,17 @@ export const projects: Project[] = [
     name: 'OmneeFX',
     category: 'professional',
     odoo: true,
-    badge: 'Odoo · Projet phare',
+    badge: 'Odoo',
     context: 'Projet professionnel — LaToure',
     description:
-      'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme : modèles, vues, parcours back-office et site.',
+      'Solution Odoo complète orientée trading / finance, avec modules métier et un module e-learning intégré pour la formation des utilisateurs. Développement et maintenance sur l’ensemble de la plateforme.',
     highlights: [
-      'Plateforme Odoo complète',
-      'Modules métier trading / finance',
+      'Odoo complet',
       'Module e-learning',
+      'Fonctionnalités métier trading / finance',
       'Back-office & parcours utilisateurs',
     ],
-    technologies: ['Odoo', 'Python', 'XML', 'QWeb', 'JavaScript', 'PostgreSQL'],
+    technologies: ['Odoo', 'Python', 'XML', 'JavaScript'],
     links: [
       { label: 'Voir le site', href: 'https://www.omneefx.com/' },
       { label: 'GitHub', href: 'https://github.com/DavidAnato/OMNEEFx' },
@@ -203,7 +166,7 @@ export const projects: Project[] = [
     name: 'Odoo Smart Search',
     category: 'professional',
     odoo: true,
-    badge: 'Odoo · IA',
+    badge: 'Odoo',
     context: 'Projet réalisé dans le cadre de Zenpilote',
     description:
       'Moteur de recherche sémantique sur le catalogue apps.odoo.com : recherche par intention plutôt que par mot-clé, indexation vectorielle des modules, traduction FR/EN et filtres (version, prix, licence, éditeur).',
@@ -215,7 +178,6 @@ export const projects: Project[] = [
       'API FastAPI + frontend React',
     ],
     technologies: [
-      'Odoo',
       'Python',
       'FastAPI',
       'React',
@@ -231,7 +193,7 @@ export const projects: Project[] = [
     name: 'Prestige Distribution',
     category: 'professional',
     odoo: true,
-    badge: 'Odoo · Intégration',
+    badge: 'Odoo',
     context: 'Projet réalisé dans le cadre de Zenpilote',
     description:
       'Plateforme web de distribution e-commerce, avec boutique en ligne, gestion des produits et parcours d’achat. Intégration WordPress / WooCommerce, personnalisations via WP Code, et connexion au métier Odoo.',
@@ -241,7 +203,7 @@ export const projects: Project[] = [
       'Personnalisations WP Code',
       'Parcours distribution & catalogue',
     ],
-    technologies: ['Odoo', 'WordPress', 'WooCommerce', 'WP Code'],
+    technologies: ['WordPress', 'WooCommerce', 'WP Code', 'Odoo'],
     links: [{ label: 'Voir le site', href: 'https://www.prestige-distribution.eu/' }],
   },
   {
@@ -500,21 +462,6 @@ export const projects: Project[] = [
 
 export const skills = [
   {
-    category: 'Odoo & ERP',
-    items: [
-      'Odoo',
-      'Modules custom',
-      'Python ORM',
-      'Vues XML / QWeb',
-      'OWL / JavaScript',
-      'Website Builder',
-      'e-Learning',
-      'Achats & facturation',
-      'Intégrations WooCommerce',
-      'PostgreSQL',
-    ],
-  },
-  {
     category: 'Langages',
     items: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS', 'SQL'],
   },
@@ -577,7 +524,7 @@ export const skills = [
   },
   {
     category: 'Autres',
-    items: ['Postman', 'Figma', 'Progressive Web Apps', 'UI/UX', 'Tests & débogage'],
+    items: ['Odoo', 'Postman', 'Figma', 'Progressive Web Apps', 'UI/UX', 'Tests & débogage'],
   },
 ] as const
 
@@ -597,7 +544,6 @@ export const education = [
 export const navLinks = [
   { href: '#accueil', label: 'Accueil' },
   { href: '#apropos', label: 'À propos' },
-  { href: '#odoo', label: 'Odoo' },
   { href: '#experience', label: 'Expérience' },
   { href: '#projets', label: 'Projets' },
   { href: '#competences', label: 'Compétences' },

@@ -8,7 +8,6 @@ import {
   faCircleCheck,
   faCloud,
   faCode,
-  faCubes,
   faDatabase,
   faDownload,
   faEnvelope,
@@ -151,10 +150,6 @@ export function IconMobile({ size, className }: IconProps) {
 
 export function IconDesktop({ size, className }: IconProps) {
   return <Fa icon={faDesktop} size={size} className={className} />
-}
-
-export function IconCubes({ size, className }: IconProps) {
-  return <Fa icon={faCubes} size={size} className={className} />
 }
 
 export function IconMessage({ size, className }: IconProps) {

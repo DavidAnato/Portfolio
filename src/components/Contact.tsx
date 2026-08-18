@@ -34,7 +34,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Un projet ? Parlons-en."
-          description="Ouvert aux missions Odoo, au Full-Stack et à l’IA — collaborations, projets et opportunités remote."
+          description="Je suis ouvert aux opportunités remote, collaborations et projets où je peux apporter mes compétences en développement Full-Stack et en intelligence artificielle."
         />
 
         <div ref={ref} className="reveal grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8">
